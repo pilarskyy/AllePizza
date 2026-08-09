@@ -1,0 +1,447 @@
+/* ===== 01. PAGE HEADER ===== */
+.page-hero {
+  background: linear-gradient(120deg, var(--navy), var(--navy-light));
+  color: var(--white);
+  padding-block: var(--space-lg);
+  text-align: center;
+}
+
+.page-hero h1 {
+  color: var(--white);
+  margin-bottom: 0.4rem;
+}
+
+.page-hero p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ===== 02. CATEGORY TABS ===== */
+.menu-tabs {
+  position: sticky;
+  top: var(--header-offset, 0);
+  z-index: 40;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+}
+
+.menu-tabs__list {
+  display: flex;
+  gap: var(--space-sm);
+  overflow-x: auto;
+  padding-block: var(--space-sm);
+}
+
+.menu-tabs__btn {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius-pill);
+  border: 2px solid var(--border);
+  background: var(--white);
+  color: var(--text);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.menu-tabs__btn:hover {
+  border-color: var(--orange);
+}
+
+.menu-tabs__btn.is-active {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: var(--white);
+}
+
+/* ===== 03. TAB PANELS ===== */
+.menu-panel {
+  display: none;
+}
+
+.menu-panel.is-active {
+  display: block;
+}
+
+/* ===== 04. FILTER CHIPS ===== */
+.filter-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: var(--space-lg);
+}
+
+.filter-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border);
+  background: var(--cream);
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.filter-chip.is-active {
+  background: var(--orange);
+  border-color: var(--orange);
+  color: var(--white);
+}
+
+/* ===== 05. PIZZA GRID/CARD ===== */
+.pizza-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--space-md);
+}
+
+.pizza-card {
+  position: relative;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pizza-card[hidden] {
+  display: none;
+}
+
+.pizza-card__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  min-height: 6.5rem;
+  /* reserve room for the photo bleeding from the corner so it never
+     overlaps the name/ingredients text below */
+  padding-right: 8.5rem;
+}
+
+/* Clips ONLY the product photo to the card's rounded rectangle. This is
+   deliberately its own mask (not overflow:hidden on .pizza-card itself)
+   so allergen tooltips further down the card are free to pop outside
+   the card's box without getting clipped too. */
+.pizza-card__photo-mask {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Product photo bleeds off the card's top-right corner, clipped by
+   .pizza-card__photo-mask so only roughly half of it ever shows and
+   nothing pokes past the tile. .pizza-card__top's min-height/
+   padding-right keep it clear of the text. */
+.pizza-card__photo {
+  position: absolute;
+  top: -7rem;
+  right: -7rem;
+  width: 14rem;
+  height: 14rem;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  background: var(--cream);
+}
+
+.pizza-card__photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pizza-card__tags {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.35rem;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 0.25rem 0.55rem;
+  border-radius: var(--radius-pill);
+}
+
+.tag--ostra {
+  background: #ffe3d9;
+  color: #b8391a;
+}
+
+.tag--nowosc {
+  background: #e2eefe;
+  color: #1e5fb8;
+}
+
+.tag--bianca {
+  background: #f1ede4;
+  color: #6b5b3d;
+}
+
+.tag--wege {
+  background: #e3f3e6;
+  color: #2f7a3f;
+}
+
+.pizza-card__name {
+  font-size: 1.1rem;
+}
+
+.pizza-card__ingredients {
+  font-size: 0.9rem;
+  flex-grow: 1;
+}
+
+/* ===== ALLERGEN TOOLTIP ===== */
+.pizza-card__allergens-wrap {
+  position: relative;
+}
+
+/* Plain text fallback (used only for the one pizza whose allergens
+   depend on which half is chosen, so there's no fixed list to show). */
+.pizza-card__allergens {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  opacity: 0.8;
+}
+
+.allergen-trigger {
+  all: unset;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.78rem;
+  font-family: inherit;
+  color: var(--text-muted);
+  border-bottom: 1px dotted var(--text-muted);
+  cursor: help;
+  line-height: 1.4;
+}
+
+.allergen-trigger i {
+  color: var(--orange);
+  font-size: 0.8rem;
+}
+
+.allergen-trigger:hover,
+.allergen-trigger:focus-visible {
+  color: var(--orange-dark);
+  border-bottom-color: var(--orange-dark);
+}
+
+.allergen-trigger:focus-visible {
+  outline: 2px solid var(--orange-dark);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.allergen-tooltip {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 0.6rem);
+  z-index: 30;
+  width: min(16rem, calc(100vw - 2.5rem));
+  background: var(--navy);
+  color: var(--white);
+  padding: 0.75rem 0.9rem;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 16px 34px -14px rgba(12, 18, 48, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, 4px);
+  transition:
+    opacity 0.15s ease,
+    transform 0.15s ease,
+    visibility 0.15s;
+  pointer-events: none;
+}
+
+.allergen-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -6px;
+  border: 6px solid transparent;
+  border-top-color: var(--navy);
+}
+
+.pizza-card__allergens-wrap:hover .allergen-tooltip,
+.pizza-card__allergens-wrap:focus-within .allergen-tooltip,
+.pizza-card__allergens-wrap.is-open .allergen-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+  pointer-events: auto;
+}
+
+.allergen-tooltip__title {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  color: var(--orange);
+}
+
+.allergen-tooltip__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.8rem;
+}
+
+.allergen-tooltip__list strong {
+  color: var(--orange);
+  margin-right: 0.3rem;
+}
+
+.pizza-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed var(--border);
+}
+
+.pizza-card__prices {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.pizza-card__prices strong {
+  color: var(--navy);
+  font-size: 1rem;
+}
+
+/* ===== 06. ALLERGEN LEGEND ===== */
+.allergen-legend {
+  margin-top: var(--space-xl);
+  background: var(--cream);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+}
+
+.allergen-legend summary {
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.allergen-legend__list {
+  margin-top: var(--space-sm);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.4rem 1.5rem;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.allergen-legend__list li strong {
+  color: var(--navy);
+}
+
+/* ===== 07. SNACK LIST (przekąski) ===== */
+.snack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--space-md);
+}
+
+.snack-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  box-shadow: var(--shadow-card);
+  text-align: center;
+}
+
+.snack-card .icon-badge {
+  margin-inline: auto;
+  margin-bottom: var(--space-sm);
+}
+
+.snack-card h3 {
+  margin-bottom: 0.3rem;
+}
+
+.snack-card p {
+  font-size: 0.9rem;
+  margin-bottom: 0.6rem;
+}
+
+.snack-card__price {
+  font-weight: 700;
+  color: var(--navy);
+}
+
+/* ===== 08. PRICE TABLE (napoje / dodatki) ===== */
+.price-table {
+  width: 100%;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+
+.price-table th,
+.price-table td {
+  padding: 0.85rem 1.1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.price-table th {
+  background: var(--cream);
+  font-family: var(--font-display);
+  color: var(--navy);
+}
+
+.price-table td:last-child,
+.price-table th:last-child {
+  text-align: right;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.price-table tr:last-child td {
+  border-bottom: none;
+}
+
+.price-note {
+  margin-top: var(--space-sm);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 640px) {
+  .allergen-legend__list {
+    grid-template-columns: 1fr;
+  }
+}

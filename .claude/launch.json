@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "allepizza-dev",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8097"],
+      "port": 8097
+    }
+  ]
+}

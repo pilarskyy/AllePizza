@@ -1,0 +1,96 @@
+/* ===== 01. FOOTER SHELL ===== */
+.footer {
+  background: var(--navy);
+  color: rgba(255, 255, 255, 0.75);
+  padding-block: var(--space-xl) var(--space-lg);
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: var(--space-lg);
+}
+
+.footer__heading {
+  color: var(--white);
+  font-size: 1rem;
+  margin-bottom: var(--space-sm);
+}
+
+.footer__logo {
+  margin-bottom: var(--space-sm);
+}
+
+.footer__tagline {
+  max-width: 26rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ===== 02. FOOTER LISTS/LINKS ===== */
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer__list a:hover {
+  color: var(--orange);
+}
+
+.footer__item {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.footer__item i {
+  color: var(--orange);
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+/* ===== 03. SOCIAL/PLATFORM ICONS ===== */
+.footer__social {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: var(--space-sm);
+}
+
+.footer__social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--white);
+  transition:
+    background-color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.footer__social a:hover {
+  background: var(--orange);
+  transform: translateY(-2px);
+}
+
+/* ===== 04. BOTTOM BAR ===== */
+.footer__bottom {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-md);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 780px) {
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+}

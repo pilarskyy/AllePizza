@@ -1,0 +1,7 @@
+# Source/working files not needed for the deployed site
+*.psd
+*.ai
+
+# OS junk
+.DS_Store
+Thumbs.db

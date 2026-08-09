@@ -1,0 +1,2551 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu — Alle Pizza Gorzów Wlkp.</title>
+  <meta
+    name="description"
+    content="Pełne menu Alle Pizza: 55 pizz w rozmiarach 32/45 cm, przekąski, napoje i dodatki. Sprawdź ceny i zamów online z dowozem po Gorzowie Wlkp."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/header-nav.css" />
+  <link rel="stylesheet" href="css/menu.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Przejdź do treści</a>
+
+  <header class="header" data-header>
+    <div class="header__strip">
+      <div class="container header__strip-inner">
+        <span class="header__strip-item"
+          ><i class="fa-solid fa-clock" aria-hidden="true"></i> Czynne codziennie
+          11:00–23:00</span
+        >
+        <span class="header__strip-item"
+          ><i class="fa-solid fa-motorcycle" aria-hidden="true"></i> Dowóz gratis od
+          17 zł na terenie Gorzowa</span
+        >
+        <a href="tel:+48957352211" class="header__strip-item"
+          ><i class="fa-solid fa-phone" aria-hidden="true"></i> 95 735 22 11</a
+        >
+      </div>
+    </div>
+
+    <div class="container header__bar">
+      <a href="index.html" class="logo">
+        <span class="logo__mark"
+          ><i class="fa-solid fa-pizza-slice" aria-hidden="true"></i
+        ></span>
+        Alle<span class="logo__accent">Pizza</span>
+      </a>
+
+      <button class="nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        <span class="visually-hidden">Otwórz menu</span>
+      </button>
+
+      <nav class="nav" id="primary-nav" data-nav>
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">Start</a></li>
+          <li><a class="nav__link nav__link--active" href="menu.html">Menu</a></li>
+          <li><a class="nav__link" href="catering.html">Catering</a></li>
+          <li><a class="nav__link" href="kontakt.html">Kontakt</a></li>
+        </ul>
+        <a class="btn btn--primary nav__cta" href="https://allepizza.papu.io/" target="_blank" rel="noopener">
+          <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i> Zamów online
+        </a>
+      </nav>
+    </div>
+  </header>
+  <div class="nav-scrim" data-nav-scrim></div>
+
+  <main id="main">
+    <div class="page-hero">
+      <div class="container">
+        <h1>Menu</h1>
+        <p>55 pizz, przekąski, napoje i dodatki — wybierz swój ulubiony smak.</p>
+      </div>
+    </div>
+
+    <div class="menu-tabs">
+      <div class="container">
+        <div class="menu-tabs__list" role="tablist" aria-label="Kategorie menu" data-menu-tabs>
+          <button class="menu-tabs__btn is-active" type="button" role="tab" aria-selected="true" data-tab-target="pizza">
+            <i class="fa-solid fa-pizza-slice" aria-hidden="true"></i> Pizza
+          </button>
+          <button class="menu-tabs__btn" type="button" role="tab" aria-selected="false" data-tab-target="przekaski">
+            <i class="fa-solid fa-drumstick-bite" aria-hidden="true"></i> Przekąski
+          </button>
+          <button class="menu-tabs__btn" type="button" role="tab" aria-selected="false" data-tab-target="napoje">
+            <i class="fa-solid fa-bottle-water" aria-hidden="true"></i> Napoje
+          </button>
+          <button class="menu-tabs__btn" type="button" role="tab" aria-selected="false" data-tab-target="dodatki">
+            <i class="fa-solid fa-plus" aria-hidden="true"></i> Dodatki do pizzy
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <section class="section" id="pizza">
+      <div class="container">
+        <div class="menu-panel is-active" data-tab-panel="pizza">
+          <div class="filter-chips" data-filter-chips>
+            <button class="filter-chip is-active" type="button" data-filter="wszystkie">Wszystkie</button>
+            <button class="filter-chip" type="button" data-filter="wege">
+              <i class="fa-solid fa-seedling" aria-hidden="true"></i> Wegetariańskie
+            </button>
+            <button class="filter-chip" type="button" data-filter="ostra">
+              <i class="fa-solid fa-pepper-hot" aria-hidden="true"></i> Ostre
+            </button>
+            <button class="filter-chip" type="button" data-filter="bianca">
+              <i class="fa-solid fa-cheese" aria-hidden="true"></i> Bianca
+            </button>
+            <button class="filter-chip" type="button" data-filter="nowosc">
+              <i class="fa-solid fa-star" aria-hidden="true"></i> Nowości
+            </button>
+          </div>
+
+          <div class="pizza-grid" data-pizza-grid>
+          <article class="pizza-card" data-tags="wege">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              <span class="tag tag--wege"><i class="fa-solid fa-seedling" aria-hidden="true"></i> Wege</span>
+              </div>
+            </div>
+            <h3 class="pizza-card__name">1. Margherita</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-1"
+        >
+          Alergeny: 1, 7
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-1">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>29,00 zł</strong></span>
+              <span>45 cm <strong>49,00 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="wege">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              <span class="tag tag--wege"><i class="fa-solid fa-seedling" aria-hidden="true"></i> Wege</span>
+              </div>
+            </div>
+            <h3 class="pizza-card__name">2. Funghi</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, pieczarki</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-2"
+        >
+          Alergeny: 1, 7
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-2">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>31,00 zł</strong></span>
+              <span>45 cm <strong>52,00 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="wszystkie">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              </div>
+            </div>
+            <h3 class="pizza-card__name">3. Vesuvio</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, szynka</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-3"
+        >
+          Alergeny: 1, 6, 7, 9, 10
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-3">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>6</strong> Soja i produkty pochodne</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          <li><strong>9</strong> Seler i produkty pochodne</li>
+          <li><strong>10</strong> Gorczyca i produkty pochodne</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>33,00 zł</strong></span>
+              <span>45 cm <strong>54,00 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="wszystkie">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              </div>
+            </div>
+            <h3 class="pizza-card__name">4. Caruso</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, salami, pieczarki</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-4"
+        >
+          Alergeny: 1, 6, 7, 9, 10
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-4">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>6</strong> Soja i produkty pochodne</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          <li><strong>9</strong> Seler i produkty pochodne</li>
+          <li><strong>10</strong> Gorczyca i produkty pochodne</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>36,00 zł</strong></span>
+              <span>45 cm <strong>57,00 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="wszystkie">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              </div>
+            </div>
+            <h3 class="pizza-card__name">5. Capriciosa</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, szynka, pieczarki</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-5"
+        >
+          Alergeny: 1, 6, 7, 9, 10
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-5">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>6</strong> Soja i produkty pochodne</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          <li><strong>9</strong> Seler i produkty pochodne</li>
+          <li><strong>10</strong> Gorczyca i produkty pochodne</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>36,00 zł</strong></span>
+              <span>45 cm <strong>57,00 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="wszystkie">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              </div>
+            </div>
+            <h3 class="pizza-card__name">6. Tomaso</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, szynka, krewetki</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-6"
+        >
+          Alergeny: 1, 2, 6, 7, 9, 10
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-6">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>2</strong> Skorupiaki i produkty pochodne</li>
+          <li><strong>6</strong> Soja i produkty pochodne</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          <li><strong>9</strong> Seler i produkty pochodne</li>
+          <li><strong>10</strong> Gorczyca i produkty pochodne</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>39,00 zł</strong></span>
+              <span>45 cm <strong>61,00 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="wszystkie">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              </div>
+            </div>
+            <h3 class="pizza-card__name">7. Dekoro</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, szynka, pieczarki, ogórek konserwowy</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-7"
+        >
+          Alergeny: 1, 6, 7, 9, 10
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-7">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>6</strong> Soja i produkty pochodne</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          <li><strong>9</strong> Seler i produkty pochodne</li>
+          <li><strong>10</strong> Gorczyca i produkty pochodne</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>37,00 zł</strong></span>
+              <span>45 cm <strong>58,00 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="wszystkie">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              </div>
+            </div>
+            <h3 class="pizza-card__name">8. Hawajska</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, szynka, ananas</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-8"
+        >
+          Alergeny: 1, 6, 7, 9, 10
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-8">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>6</strong> Soja i produkty pochodne</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          <li><strong>9</strong> Seler i produkty pochodne</li>
+          <li><strong>10</strong> Gorczyca i produkty pochodne</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>36,00 zł</strong></span>
+              <span>45 cm <strong>57,00 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="wszystkie">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              </div>
+            </div>
+            <h3 class="pizza-card__name">9. Bolognese</h3>
+            <p class="pizza-card__ingredients">2x sos pomidorowy, ser, mięso mielone, cebula, czosnek</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-9"
+        >
+          Alergeny: 1, 6, 7, 9, 10
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-9">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>6</strong> Soja i produkty pochodne</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          <li><strong>9</strong> Seler i produkty pochodne</li>
+          <li><strong>10</strong> Gorczyca i produkty pochodne</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>36,00 zł</strong></span>
+              <span>45 cm <strong>57,00 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="wszystkie">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              </div>
+            </div>
+            <h3 class="pizza-card__name">10. Siciliana</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, szynka, salami, pieczarki</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-10"
+        >
+          Alergeny: 1, 6, 7, 9, 10
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-10">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>6</strong> Soja i produkty pochodne</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          <li><strong>9</strong> Seler i produkty pochodne</li>
+          <li><strong>10</strong> Gorczyca i produkty pochodne</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>37,50 zł</strong></span>
+              <span>45 cm <strong>59,00 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="wege">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              <span class="tag tag--wege"><i class="fa-solid fa-seedling" aria-hidden="true"></i> Wege</span>
+              </div>
+            </div>
+            <h3 class="pizza-card__name">11. Wegetariańska I</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, pieczarki, cebula, papryka, kukurydza, oliwki</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-11"
+        >
+          Alergeny: 1, 7
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-11">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>37,00 zł</strong></span>
+              <span>45 cm <strong>58,00 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="wege">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              <span class="tag tag--wege"><i class="fa-solid fa-seedling" aria-hidden="true"></i> Wege</span>
+              </div>
+            </div>
+            <h3 class="pizza-card__name">12. Wegetariańska II</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, pieczarki, cebula, papryka, ogórek konserwowy, brokuły, pomidor</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-12"
+        >
+          Alergeny: 1, 7
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-12">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>37,00 zł</strong></span>
+              <span>45 cm <strong>58,00 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="ostra">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              <span class="tag tag--ostra"><i class="fa-solid fa-pepper-hot" aria-hidden="true"></i> Ostra</span>
+              </div>
+            </div>
+            <h3 class="pizza-card__name">13. Corleone</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, szynka, bekon, pieczarki, papryka peperoni</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-13"
+        >
+          Alergeny: 1, 3, 5, 7, 8, 9, 10, 11
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-13">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>3</strong> Jaja i produkty pochodne</li>
+          <li><strong>5</strong> Orzeszki ziemne (arachidowe)</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          <li><strong>8</strong> Orzechy (migdały, laskowe, włoskie, nerkowca i in.)</li>
+          <li><strong>9</strong> Seler i produkty pochodne</li>
+          <li><strong>10</strong> Gorczyca i produkty pochodne</li>
+          <li><strong>11</strong> Nasiona sezamu i produkty pochodne</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>38,50 zł</strong></span>
+              <span>45 cm <strong>60,50 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="wszystkie">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              </div>
+            </div>
+            <h3 class="pizza-card__name">14. Spinaci</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, szynka, pieczarki, szpinak, cebula, czosnek</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-14"
+        >
+          Alergeny: 1, 6, 7, 9, 10
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-14">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>6</strong> Soja i produkty pochodne</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          <li><strong>9</strong> Seler i produkty pochodne</li>
+          <li><strong>10</strong> Gorczyca i produkty pochodne</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>37,50 zł</strong></span>
+              <span>45 cm <strong>58,00 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="wszystkie">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              </div>
+            </div>
+            <h3 class="pizza-card__name">15. Morska</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, krewetki, tuńczyk, małże, oliwki, czosnek</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-15"
+        >
+          Alergeny: 1, 2, 4, 7, 14
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-15">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>2</strong> Skorupiaki i produkty pochodne</li>
+          <li><strong>4</strong> Ryby i produkty pochodne</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          <li><strong>14</strong> Mięczaki i produkty pochodne</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>39,00 zł</strong></span>
+              <span>45 cm <strong>61,50 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="wszystkie">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              </div>
+            </div>
+            <h3 class="pizza-card__name">16. Quattro Stagioni</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, szynka, pieczarki, małże, krewetki</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-16"
+        >
+          Alergeny: 1, 2, 6, 7, 9, 10, 14
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-16">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>2</strong> Skorupiaki i produkty pochodne</li>
+          <li><strong>6</strong> Soja i produkty pochodne</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          <li><strong>9</strong> Seler i produkty pochodne</li>
+          <li><strong>10</strong> Gorczyca i produkty pochodne</li>
+          <li><strong>14</strong> Mięczaki i produkty pochodne</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>39,00 zł</strong></span>
+              <span>45 cm <strong>61,50 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="wszystkie">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              </div>
+            </div>
+            <h3 class="pizza-card__name">17. Tonno</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, tuńczyk, cebula, oliwki</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-17"
+        >
+          Alergeny: 1, 4, 7
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-17">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>4</strong> Ryby i produkty pochodne</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>38,00 zł</strong></span>
+              <span>45 cm <strong>59,00 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="wszystkie">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              </div>
+            </div>
+            <h3 class="pizza-card__name">18. Carato</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, bekon, cebula, pomidor, sos czosnkowy</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-18"
+        >
+          Alergeny: 1, 3, 5, 7, 8, 9, 10, 11
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-18">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>3</strong> Jaja i produkty pochodne</li>
+          <li><strong>5</strong> Orzeszki ziemne (arachidowe)</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          <li><strong>8</strong> Orzechy (migdały, laskowe, włoskie, nerkowca i in.)</li>
+          <li><strong>9</strong> Seler i produkty pochodne</li>
+          <li><strong>10</strong> Gorczyca i produkty pochodne</li>
+          <li><strong>11</strong> Nasiona sezamu i produkty pochodne</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>37,50 zł</strong></span>
+              <span>45 cm <strong>59,00 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="wszystkie">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              </div>
+            </div>
+            <h3 class="pizza-card__name">19. Americana</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser i klasyczne dodatki szefa kuchni</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-19"
+        >
+          Alergeny: 1, 6, 7, 9, 10
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-19">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>6</strong> Soja i produkty pochodne</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          <li><strong>9</strong> Seler i produkty pochodne</li>
+          <li><strong>10</strong> Gorczyca i produkty pochodne</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>38,00 zł</strong></span>
+              <span>45 cm <strong>59,00 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="wszystkie">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              </div>
+            </div>
+            <h3 class="pizza-card__name">20. Verona</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, szynka, bekon, papryka, brokuły, cebula</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-20"
+        >
+          Alergeny: 1, 3, 5, 7, 8, 9, 10, 11
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-20">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>3</strong> Jaja i produkty pochodne</li>
+          <li><strong>5</strong> Orzeszki ziemne (arachidowe)</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          <li><strong>8</strong> Orzechy (migdały, laskowe, włoskie, nerkowca i in.)</li>
+          <li><strong>9</strong> Seler i produkty pochodne</li>
+          <li><strong>10</strong> Gorczyca i produkty pochodne</li>
+          <li><strong>11</strong> Nasiona sezamu i produkty pochodne</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>38,50 zł</strong></span>
+              <span>45 cm <strong>60,50 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="wszystkie">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              </div>
+            </div>
+            <h3 class="pizza-card__name">21. Wiejska</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, kiełbasa, bekon, cebula, czosnek</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-21"
+        >
+          Alergeny: 1, 3, 5, 7, 8, 9, 10, 11
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-21">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>3</strong> Jaja i produkty pochodne</li>
+          <li><strong>5</strong> Orzeszki ziemne (arachidowe)</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          <li><strong>8</strong> Orzechy (migdały, laskowe, włoskie, nerkowca i in.)</li>
+          <li><strong>9</strong> Seler i produkty pochodne</li>
+          <li><strong>10</strong> Gorczyca i produkty pochodne</li>
+          <li><strong>11</strong> Nasiona sezamu i produkty pochodne</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>38,00 zł</strong></span>
+              <span>45 cm <strong>59,50 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="wszystkie">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              </div>
+            </div>
+            <h3 class="pizza-card__name">22. Farmerska</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, kurczak, papryka, cebula, ogórek konserwowy</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-22"
+        >
+          Alergeny: 1, 7
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-22">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>38,00 zł</strong></span>
+              <span>45 cm <strong>59,50 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="wszystkie">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              </div>
+            </div>
+            <h3 class="pizza-card__name">23. Chickenpizza</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, kurczak, cebula, kukurydza, papryka</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-23"
+        >
+          Alergeny: 1, 7
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-23">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>38,00 zł</strong></span>
+              <span>45 cm <strong>59,50 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="wszystkie">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              </div>
+            </div>
+            <h3 class="pizza-card__name">24. Salami</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, salami, cebula, papryka</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-24"
+        >
+          Alergeny: 1, 6, 7, 9, 10
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-24">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>6</strong> Soja i produkty pochodne</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          <li><strong>9</strong> Seler i produkty pochodne</li>
+          <li><strong>10</strong> Gorczyca i produkty pochodne</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>39,00 zł</strong></span>
+              <span>45 cm <strong>59,50 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="ostra">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              <span class="tag tag--ostra"><i class="fa-solid fa-pepper-hot" aria-hidden="true"></i> Ostra</span>
+              </div>
+            </div>
+            <h3 class="pizza-card__name">25. Peperoni</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, szynka, papryka, cebula, papryka peperoni</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-25"
+        >
+          Alergeny: 1, 6, 7, 9, 10
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-25">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>6</strong> Soja i produkty pochodne</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          <li><strong>9</strong> Seler i produkty pochodne</li>
+          <li><strong>10</strong> Gorczyca i produkty pochodne</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>36,00 zł</strong></span>
+              <span>45 cm <strong>56,50 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="ostra">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              <span class="tag tag--ostra"><i class="fa-solid fa-pepper-hot" aria-hidden="true"></i> Ostra</span>
+              </div>
+            </div>
+            <h3 class="pizza-card__name">26. La Mafia</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, bekon, cebula, papryka, chili</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-26"
+        >
+          Alergeny: 1, 3, 5, 7, 8, 9, 10, 11
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-26">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>3</strong> Jaja i produkty pochodne</li>
+          <li><strong>5</strong> Orzeszki ziemne (arachidowe)</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          <li><strong>8</strong> Orzechy (migdały, laskowe, włoskie, nerkowca i in.)</li>
+          <li><strong>9</strong> Seler i produkty pochodne</li>
+          <li><strong>10</strong> Gorczyca i produkty pochodne</li>
+          <li><strong>11</strong> Nasiona sezamu i produkty pochodne</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>38,00 zł</strong></span>
+              <span>45 cm <strong>59,50 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="ostra">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              <span class="tag tag--ostra"><i class="fa-solid fa-pepper-hot" aria-hidden="true"></i> Ostra</span>
+              </div>
+            </div>
+            <h3 class="pizza-card__name">27. Mexicana</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, kurczak, papryka, kukurydza, fasola, czosnek, tabasco</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-27"
+        >
+          Alergeny: 1, 6, 7
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-27">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>6</strong> Soja i produkty pochodne</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>38,00 zł</strong></span>
+              <span>45 cm <strong>59,50 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="ostra">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              <span class="tag tag--ostra"><i class="fa-solid fa-pepper-hot" aria-hidden="true"></i> Ostra</span>
+              </div>
+            </div>
+            <h3 class="pizza-card__name">28. Vito</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, bekon, salami, krewetki, cebula, papryka peperoni, czosnek</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-28"
+        >
+          Alergeny: 1, 2, 3, 5, 7, 8, 9, 10, 11
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-28">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>2</strong> Skorupiaki i produkty pochodne</li>
+          <li><strong>3</strong> Jaja i produkty pochodne</li>
+          <li><strong>5</strong> Orzeszki ziemne (arachidowe)</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          <li><strong>8</strong> Orzechy (migdały, laskowe, włoskie, nerkowca i in.)</li>
+          <li><strong>9</strong> Seler i produkty pochodne</li>
+          <li><strong>10</strong> Gorczyca i produkty pochodne</li>
+          <li><strong>11</strong> Nasiona sezamu i produkty pochodne</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>41,00 zł</strong></span>
+              <span>45 cm <strong>63,00 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="wszystkie">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              </div>
+            </div>
+            <h3 class="pizza-card__name">29. Italiana</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, szynka, pieczarki, cebula, bekon, papryka</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-29"
+        >
+          Alergeny: 1, 3, 5, 7, 8, 9, 10, 11
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-29">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>3</strong> Jaja i produkty pochodne</li>
+          <li><strong>5</strong> Orzeszki ziemne (arachidowe)</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          <li><strong>8</strong> Orzechy (migdały, laskowe, włoskie, nerkowca i in.)</li>
+          <li><strong>9</strong> Seler i produkty pochodne</li>
+          <li><strong>10</strong> Gorczyca i produkty pochodne</li>
+          <li><strong>11</strong> Nasiona sezamu i produkty pochodne</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>38,50 zł</strong></span>
+              <span>45 cm <strong>60,50 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="wszystkie">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              </div>
+            </div>
+            <h3 class="pizza-card__name">30. Frutti di Mare</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, owoce morza, czosnek</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-30"
+        >
+          Alergeny: 1, 2, 4, 7, 14
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-30">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>2</strong> Skorupiaki i produkty pochodne</li>
+          <li><strong>4</strong> Ryby i produkty pochodne</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          <li><strong>14</strong> Mięczaki i produkty pochodne</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>39,00 zł</strong></span>
+              <span>45 cm <strong>61,50 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="wszystkie">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              </div>
+            </div>
+            <h3 class="pizza-card__name">31. Karamba</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, polędwica wieprzowa, cebula, pieczarki, czosnek</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-31"
+        >
+          Alergeny: 1, 6, 7
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-31">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>6</strong> Soja i produkty pochodne</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>38,50 zł</strong></span>
+              <span>45 cm <strong>60,50 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="wszystkie">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              </div>
+            </div>
+            <h3 class="pizza-card__name">32. Toscana</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, polędwica wieprzowa, brokuły, papryka, pieczarki, czosnek</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-32"
+        >
+          Alergeny: 1, 6, 7
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-32">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>6</strong> Soja i produkty pochodne</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>38,50 zł</strong></span>
+              <span>45 cm <strong>60,50 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="wszystkie">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              </div>
+            </div>
+            <h3 class="pizza-card__name">33. Palermo</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, polędwica, pieczarki, szpinak, cebula, czosnek</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-33"
+        >
+          Alergeny: 1, 6, 7
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-33">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>6</strong> Soja i produkty pochodne</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>38,50 zł</strong></span>
+              <span>45 cm <strong>60,50 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="wszystkie">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              </div>
+            </div>
+            <h3 class="pizza-card__name">34. Wenecja</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, kabanos, bekon, brokuły, cebula, ogórek konserwowy, czosnek</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-34"
+        >
+          Alergeny: 1, 3, 5, 7, 8, 9, 10, 11
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-34">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>3</strong> Jaja i produkty pochodne</li>
+          <li><strong>5</strong> Orzeszki ziemne (arachidowe)</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          <li><strong>8</strong> Orzechy (migdały, laskowe, włoskie, nerkowca i in.)</li>
+          <li><strong>9</strong> Seler i produkty pochodne</li>
+          <li><strong>10</strong> Gorczyca i produkty pochodne</li>
+          <li><strong>11</strong> Nasiona sezamu i produkty pochodne</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>38,50 zł</strong></span>
+              <span>45 cm <strong>60,50 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="ostra">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              <span class="tag tag--ostra"><i class="fa-solid fa-pepper-hot" aria-hidden="true"></i> Ostra</span>
+              </div>
+            </div>
+            <h3 class="pizza-card__name">35. Piekielna</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, salami, kurczak, pieczarki, cebula, papryka peperoni, chili, czosnek</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-35"
+        >
+          Alergeny: 1, 6, 7, 9, 10
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-35">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>6</strong> Soja i produkty pochodne</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          <li><strong>9</strong> Seler i produkty pochodne</li>
+          <li><strong>10</strong> Gorczyca i produkty pochodne</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>38,50 zł</strong></span>
+              <span>45 cm <strong>60,50 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="wszystkie">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              </div>
+            </div>
+            <h3 class="pizza-card__name">36. Pablo</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, bekon, salami, pieczarki, papryka, fasola, cebula, czosnek</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-36"
+        >
+          Alergeny: 1, 3, 5, 7, 8, 9, 10, 11
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-36">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>3</strong> Jaja i produkty pochodne</li>
+          <li><strong>5</strong> Orzeszki ziemne (arachidowe)</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          <li><strong>8</strong> Orzechy (migdały, laskowe, włoskie, nerkowca i in.)</li>
+          <li><strong>9</strong> Seler i produkty pochodne</li>
+          <li><strong>10</strong> Gorczyca i produkty pochodne</li>
+          <li><strong>11</strong> Nasiona sezamu i produkty pochodne</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>38,50 zł</strong></span>
+              <span>45 cm <strong>60,50 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="wszystkie">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              </div>
+            </div>
+            <h3 class="pizza-card__name">37. Gyros Pizza</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, mięso mielone, cebula, kapusta pekińska, sos czosnkowy</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-37"
+        >
+          Alergeny: 1, 6, 7
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-37">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>6</strong> Soja i produkty pochodne</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>38,00 zł</strong></span>
+              <span>45 cm <strong>59,50 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="wszystkie">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              </div>
+            </div>
+            <h3 class="pizza-card__name">38. Kebab Pizza</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, mięso kebab z kurczaka, kapusta pekińska, sos czosnkowy</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-38"
+        >
+          Alergeny: 1, 6, 7
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-38">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>6</strong> Soja i produkty pochodne</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>38,00 zł</strong></span>
+              <span>45 cm <strong>59,50 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="wszystkie">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              </div>
+            </div>
+            <h3 class="pizza-card__name">39. Alle Pizza</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser + 4 dowolne dodatki</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-39"
+        >
+          Alergeny: 1, 7
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-39">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>41,00 zł</strong></span>
+              <span>45 cm <strong>64,00 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="wszystkie">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              </div>
+            </div>
+            <h3 class="pizza-card__name">40. Syta</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, mięso mielone, mięso kebab z kurczaka, bekon, ogórek konserwowy, cebula</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-40"
+        >
+          Alergeny: 1, 3, 5, 7, 8, 9, 10, 11
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-40">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>3</strong> Jaja i produkty pochodne</li>
+          <li><strong>5</strong> Orzeszki ziemne (arachidowe)</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          <li><strong>8</strong> Orzechy (migdały, laskowe, włoskie, nerkowca i in.)</li>
+          <li><strong>9</strong> Seler i produkty pochodne</li>
+          <li><strong>10</strong> Gorczyca i produkty pochodne</li>
+          <li><strong>11</strong> Nasiona sezamu i produkty pochodne</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>40,00 zł</strong></span>
+              <span>45 cm <strong>63,00 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="wszystkie">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              </div>
+            </div>
+            <h3 class="pizza-card__name">41. Romana</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, kurczak, bekon, cebula, papryka</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-41"
+        >
+          Alergeny: 1, 3, 5, 7, 8, 9, 10, 11
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-41">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>3</strong> Jaja i produkty pochodne</li>
+          <li><strong>5</strong> Orzeszki ziemne (arachidowe)</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          <li><strong>8</strong> Orzechy (migdały, laskowe, włoskie, nerkowca i in.)</li>
+          <li><strong>9</strong> Seler i produkty pochodne</li>
+          <li><strong>10</strong> Gorczyca i produkty pochodne</li>
+          <li><strong>11</strong> Nasiona sezamu i produkty pochodne</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>38,00 zł</strong></span>
+              <span>45 cm <strong>59,50 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="wszystkie">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              </div>
+            </div>
+            <h3 class="pizza-card__name">42. Tomato</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, salami, kurczak, kukurydza, pomidor, oliwki</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-42"
+        >
+          Alergeny: 1, 6, 7, 9, 10
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-42">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>6</strong> Soja i produkty pochodne</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          <li><strong>9</strong> Seler i produkty pochodne</li>
+          <li><strong>10</strong> Gorczyca i produkty pochodne</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>38,50 zł</strong></span>
+              <span>45 cm <strong>60,50 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="ostra">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              <span class="tag tag--ostra"><i class="fa-solid fa-pepper-hot" aria-hidden="true"></i> Ostra</span>
+              </div>
+            </div>
+            <h3 class="pizza-card__name">43. Soprano</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, kiełbasa, kabanos, brokuły, cebula, ogórek konserwowy, chili</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-43"
+        >
+          Alergeny: 1, 6, 7, 9, 10
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-43">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>6</strong> Soja i produkty pochodne</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          <li><strong>9</strong> Seler i produkty pochodne</li>
+          <li><strong>10</strong> Gorczyca i produkty pochodne</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>38,50 zł</strong></span>
+              <span>45 cm <strong>60,50 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="wszystkie">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              </div>
+            </div>
+            <h3 class="pizza-card__name">44. Callzone I (pieróg)</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, szynka, pieczarki, cebula</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-44"
+        >
+          Alergeny: 1, 6, 7, 9, 10
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-44">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>6</strong> Soja i produkty pochodne</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          <li><strong>9</strong> Seler i produkty pochodne</li>
+          <li><strong>10</strong> Gorczyca i produkty pochodne</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices pizza-card__prices--single">
+              <span>Cena <strong>36,50 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="wszystkie">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              </div>
+            </div>
+            <h3 class="pizza-card__name">45. Callzone II (pieróg)</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, salami, szynka, pieczarki, cebula</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-45"
+        >
+          Alergeny: 1, 6, 7, 9, 10
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-45">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>6</strong> Soja i produkty pochodne</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          <li><strong>9</strong> Seler i produkty pochodne</li>
+          <li><strong>10</strong> Gorczyca i produkty pochodne</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices pizza-card__prices--single">
+              <span>Cena <strong>37,50 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="wszystkie">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              </div>
+            </div>
+            <h3 class="pizza-card__name">46. Callzone III (pieróg)</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, szynka, pieczarki, kukurydza, ogórek konserwowy, papryka, cebula</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-46"
+        >
+          Alergeny: 1, 6, 7, 9, 10
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-46">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>6</strong> Soja i produkty pochodne</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          <li><strong>9</strong> Seler i produkty pochodne</li>
+          <li><strong>10</strong> Gorczyca i produkty pochodne</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices pizza-card__prices--single">
+              <span>Cena <strong>37,50 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="wszystkie">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              </div>
+            </div>
+            <h3 class="pizza-card__name">47. Pizza pół na pół</h3>
+            <p class="pizza-card__ingredients">Dwie dowolne połówki wybrane z menu</p>
+            <p class="pizza-card__allergens">Alergeny: zależnie od wybranych połówek</p>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>41,00 zł</strong></span>
+              <span>45 cm <strong>64,00 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="nowosc">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              <span class="tag tag--nowosc"><i class="fa-solid fa-star" aria-hidden="true"></i> Nowość</span>
+              </div>
+            </div>
+            <h3 class="pizza-card__name">48. Roma</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, salami, mięso mielone, brokuły, papryka, cebula</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-47"
+        >
+          Alergeny: 1, 6, 7
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-47">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>6</strong> Soja i produkty pochodne</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>36,00 zł</strong></span>
+              <span>45 cm <strong>56,50 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="ostra nowosc">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              <span class="tag tag--ostra"><i class="fa-solid fa-pepper-hot" aria-hidden="true"></i> Ostra</span>
+              <span class="tag tag--nowosc"><i class="fa-solid fa-star" aria-hidden="true"></i> Nowość</span>
+              </div>
+            </div>
+            <h3 class="pizza-card__name">49. Jalapenos</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, salami, kurczak, pieczarki, jalapeños, cebula, chili, czosnek</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-48"
+        >
+          Alergeny: 1, 6, 7, 9, 10
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-48">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>6</strong> Soja i produkty pochodne</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          <li><strong>9</strong> Seler i produkty pochodne</li>
+          <li><strong>10</strong> Gorczyca i produkty pochodne</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>38,00 zł</strong></span>
+              <span>45 cm <strong>60,50 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="ostra nowosc">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              <span class="tag tag--ostra"><i class="fa-solid fa-pepper-hot" aria-hidden="true"></i> Ostra</span>
+              <span class="tag tag--nowosc"><i class="fa-solid fa-star" aria-hidden="true"></i> Nowość</span>
+              </div>
+            </div>
+            <h3 class="pizza-card__name">50. Napoli</h3>
+            <p class="pizza-card__ingredients">Sos pomidorowy, ser, bekon, jalapeños, pieczarki, cebula</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-49"
+        >
+          Alergeny: 1, 3, 5, 7, 8, 9, 10, 11
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-49">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>3</strong> Jaja i produkty pochodne</li>
+          <li><strong>5</strong> Orzeszki ziemne (arachidowe)</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          <li><strong>8</strong> Orzechy (migdały, laskowe, włoskie, nerkowca i in.)</li>
+          <li><strong>9</strong> Seler i produkty pochodne</li>
+          <li><strong>10</strong> Gorczyca i produkty pochodne</li>
+          <li><strong>11</strong> Nasiona sezamu i produkty pochodne</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>37,50 zł</strong></span>
+              <span>45 cm <strong>59,50 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="ostra nowosc bianca">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              <span class="tag tag--ostra"><i class="fa-solid fa-pepper-hot" aria-hidden="true"></i> Ostra</span>
+              <span class="tag tag--nowosc"><i class="fa-solid fa-star" aria-hidden="true"></i> Nowość</span>
+              <span class="tag tag--bianca"><i class="fa-solid fa-cheese" aria-hidden="true"></i> Bianca</span>
+              </div>
+            </div>
+            <h3 class="pizza-card__name">51. Piccante Peperoni Salsicia</h3>
+            <p class="pizza-card__ingredients">Śmietanka, ser, kiełbasa peperoni</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-50"
+        >
+          Alergeny: 1, 6, 7, 8, 9, 10
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-50">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>6</strong> Soja i produkty pochodne</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          <li><strong>8</strong> Orzechy (migdały, laskowe, włoskie, nerkowca i in.)</li>
+          <li><strong>9</strong> Seler i produkty pochodne</li>
+          <li><strong>10</strong> Gorczyca i produkty pochodne</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>37,00 zł</strong></span>
+              <span>45 cm <strong>60,00 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="nowosc bianca">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              <span class="tag tag--nowosc"><i class="fa-solid fa-star" aria-hidden="true"></i> Nowość</span>
+              <span class="tag tag--bianca"><i class="fa-solid fa-cheese" aria-hidden="true"></i> Bianca</span>
+              </div>
+            </div>
+            <h3 class="pizza-card__name">52. Puliciana</h3>
+            <p class="pizza-card__ingredients">Śmietanka, ser, kurczak, szpinak, cebula, czosnek</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-51"
+        >
+          Alergeny: 1, 6, 7, 8, 9, 10
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-51">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>6</strong> Soja i produkty pochodne</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          <li><strong>8</strong> Orzechy (migdały, laskowe, włoskie, nerkowca i in.)</li>
+          <li><strong>9</strong> Seler i produkty pochodne</li>
+          <li><strong>10</strong> Gorczyca i produkty pochodne</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>41,50 zł</strong></span>
+              <span>45 cm <strong>64,00 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="nowosc bianca">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              <span class="tag tag--nowosc"><i class="fa-solid fa-star" aria-hidden="true"></i> Nowość</span>
+              <span class="tag tag--bianca"><i class="fa-solid fa-cheese" aria-hidden="true"></i> Bianca</span>
+              </div>
+            </div>
+            <h3 class="pizza-card__name">53. Carbonara</h3>
+            <p class="pizza-card__ingredients">Śmietanka, ser, bekon, pieczarki, cebula</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-52"
+        >
+          Alergeny: 1, 6, 7, 8, 9, 10
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-52">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>6</strong> Soja i produkty pochodne</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          <li><strong>8</strong> Orzechy (migdały, laskowe, włoskie, nerkowca i in.)</li>
+          <li><strong>9</strong> Seler i produkty pochodne</li>
+          <li><strong>10</strong> Gorczyca i produkty pochodne</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>41,50 zł</strong></span>
+              <span>45 cm <strong>64,00 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="ostra nowosc bianca">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              <span class="tag tag--ostra"><i class="fa-solid fa-pepper-hot" aria-hidden="true"></i> Ostra</span>
+              <span class="tag tag--nowosc"><i class="fa-solid fa-star" aria-hidden="true"></i> Nowość</span>
+              <span class="tag tag--bianca"><i class="fa-solid fa-cheese" aria-hidden="true"></i> Bianca</span>
+              </div>
+            </div>
+            <h3 class="pizza-card__name">54. Diavola</h3>
+            <p class="pizza-card__ingredients">Śmietanka, ser, kiełbasa peperoni, bekon, jalapeños, pieczarki</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-53"
+        >
+          Alergeny: 1, 6, 7, 8, 9, 10
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-53">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>6</strong> Soja i produkty pochodne</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          <li><strong>8</strong> Orzechy (migdały, laskowe, włoskie, nerkowca i in.)</li>
+          <li><strong>9</strong> Seler i produkty pochodne</li>
+          <li><strong>10</strong> Gorczyca i produkty pochodne</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>43,50 zł</strong></span>
+              <span>45 cm <strong>64,00 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          <article class="pizza-card" data-tags="nowosc bianca">
+            <div class="pizza-card__top">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
+                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              </picture></div>
+              <div class="pizza-card__tags">
+              <span class="tag tag--nowosc"><i class="fa-solid fa-star" aria-hidden="true"></i> Nowość</span>
+              <span class="tag tag--bianca"><i class="fa-solid fa-cheese" aria-hidden="true"></i> Bianca</span>
+              </div>
+            </div>
+            <h3 class="pizza-card__name">55. Alle Pizza Bianca</h3>
+            <p class="pizza-card__ingredients">Śmietanka, ser + 4 dowolne składniki</p>
+            <div class="pizza-card__allergens-wrap">
+        <button
+          type="button"
+          class="allergen-trigger"
+          aria-expanded="false"
+          aria-describedby="allergen-tip-54"
+        >
+          Alergeny: 1, 6, 7, 8, 9, 10
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
+        <div class="allergen-tooltip" role="tooltip" id="allergen-tip-54">
+          <p class="allergen-tooltip__title">Ta pizza zawiera:</p>
+          <ul class="allergen-tooltip__list">
+          <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+          <li><strong>6</strong> Soja i produkty pochodne</li>
+          <li><strong>7</strong> Mleko i produkty pochodne (łącznie z laktozą)</li>
+          <li><strong>8</strong> Orzechy (migdały, laskowe, włoskie, nerkowca i in.)</li>
+          <li><strong>9</strong> Seler i produkty pochodne</li>
+          <li><strong>10</strong> Gorczyca i produkty pochodne</li>
+          </ul>
+        </div>
+      </div>
+            <div class="pizza-card__footer">
+              <div class="pizza-card__prices">
+              <span>32 cm <strong>47,00 zł</strong></span>
+              <span>45 cm <strong>70,00 zł</strong></span>
+            </div>
+              <a class="btn btn--primary btn--sm" href="https://allepizza.papu.io/" target="_blank" rel="noopener">Zamów</a>
+            </div>
+          </article>
+          </div>
+
+          <p class="filter-empty" data-filter-empty hidden>
+            Brak pizzy pasującej do wybranego filtra.
+          </p>
+
+          <details class="allergen-legend">
+            <summary
+              ><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Legenda
+              alergenów</summary
+            >
+            <ul class="allergen-legend__list">
+              <li><strong>1</strong> — gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+              <li><strong>2</strong> — skorupiaki i produkty pochodne</li>
+              <li><strong>3</strong> — jaja i produkty pochodne</li>
+              <li><strong>4</strong> — ryby i produkty pochodne</li>
+              <li><strong>5</strong> — orzeszki ziemne (arachidowe)</li>
+              <li><strong>6</strong> — soja i produkty pochodne</li>
+              <li><strong>7</strong> — mleko i produkty pochodne (łącznie z laktozą)</li>
+              <li><strong>8</strong> — orzechy (migdały, laskowe, włoskie, nerkowca i in.)</li>
+              <li><strong>9</strong> — seler i produkty pochodne</li>
+              <li><strong>10</strong> — gorczyca i produkty pochodne</li>
+              <li><strong>11</strong> — nasiona sezamu i produkty pochodne</li>
+              <li><strong>12</strong> — dwutlenek siarki i siarczyny</li>
+              <li><strong>13</strong> — łubin i produkty pochodne</li>
+              <li><strong>14</strong> — mięczaki i produkty pochodne</li>
+            </ul>
+          </details>
+        </div>
+
+        <div class="menu-panel" data-tab-panel="przekaski" id="przekaski">
+          <div class="snack-grid">
+            <article class="snack-card">
+              <span class="icon-badge icon-badge--lg"><i class="fa-solid fa-bread-slice" aria-hidden="true"></i></span>
+              <h3>Pyszne panini</h3>
+              <p>20 szt. z dodatkiem masła czosnkowego</p>
+              <p class="snack-card__price">18,50 zł</p>
+              <p class="pizza-card__allergens">Dodatkowe masełko — 5,50 zł</p>
+            </article>
+            <article class="snack-card">
+              <span class="icon-badge icon-badge--lg"><i class="fa-solid fa-drumstick-bite" aria-hidden="true"></i></span>
+              <h3>Pikantne skrzydełka</h3>
+              <p class="pizza-card__allergens">Alergeny: 1, 6</p>
+              <p class="snack-card__price">10 szt. — 30,00 zł</p>
+              <p class="snack-card__price">15 szt. — 42,00 zł</p>
+              <p class="snack-card__price">20 szt. — 49,00 zł</p>
+            </article>
+            <article class="snack-card">
+              <span class="icon-badge icon-badge--lg"><i class="fa-solid fa-drumstick-bite" aria-hidden="true"></i></span>
+              <h3>Nuggetsy</h3>
+              <p class="pizza-card__allergens">Alergeny: 1, 6</p>
+              <p class="snack-card__price">10 szt. — 21,00 zł</p>
+            </article>
+            <article class="snack-card">
+              <span class="icon-badge icon-badge--lg"><i class="fa-solid fa-child" aria-hidden="true"></i></span>
+              <h3>Zestaw dziecięcy</h3>
+              <p>Nuggetsy 6 szt. z frytkami</p>
+              <p class="pizza-card__allergens">Alergeny: 1, 6</p>
+              <p class="snack-card__price">19,00 zł</p>
+            </article>
+            <article class="snack-card">
+              <span class="icon-badge icon-badge--lg"><i class="fa-solid fa-french-fries" aria-hidden="true"></i></span>
+              <h3>Frytki</h3>
+              <p class="snack-card__price">13,00 zł</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="menu-panel" data-tab-panel="napoje" id="napoje">
+          <table class="price-table">
+            <thead>
+              <tr>
+                <th>Napój</th>
+                <th>0,5 l</th>
+                <th>1 l</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><i class="fa-solid fa-bottle-water" aria-hidden="true"></i> Coca-Cola</td>
+                <td>10,50 zł</td>
+                <td>12,50 zł</td>
+              </tr>
+              <tr>
+                <td><i class="fa-solid fa-bottle-water" aria-hidden="true"></i> Fanta</td>
+                <td>10,50 zł</td>
+                <td>12,50 zł</td>
+              </tr>
+              <tr>
+                <td><i class="fa-solid fa-bottle-water" aria-hidden="true"></i> Sprite</td>
+                <td>10,50 zł</td>
+                <td>12,50 zł</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="menu-panel" data-tab-panel="dodatki" id="dodatki">
+          <table class="price-table">
+            <thead>
+              <tr>
+                <th>Dodatek</th>
+                <th>32 cm</th>
+                <th>45 cm</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mięso</td>
+                <td>4,50 zł</td>
+                <td>6,50 zł</td>
+              </tr>
+              <tr>
+                <td>Owoce morza</td>
+                <td>6,00 zł</td>
+                <td>8,00 zł</td>
+              </tr>
+              <tr>
+                <td>Ser</td>
+                <td>5,00 zł</td>
+                <td>7,00 zł</td>
+              </tr>
+              <tr>
+                <td>Warzywa</td>
+                <td>4,00 zł</td>
+                <td>5,00 zł</td>
+              </tr>
+              <tr>
+                <td>Sosy: pomidorowy, czosnkowy, ketchup</td>
+                <td>3,50 zł</td>
+                <td>4,00 zł</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="price-note">
+            <i class="fa-solid fa-gift" aria-hidden="true"></i> Cebula, czosnek,
+            oregano i chili dodajemy zawsze gratis.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <a href="index.html" class="logo footer__logo">
+          <span class="logo__mark"
+            ><i class="fa-solid fa-pizza-slice" aria-hidden="true"></i
+          ></span>
+          Alle<span class="logo__accent">Pizza</span>
+        </a>
+        <p class="footer__tagline">
+          Najlepsza pizza w Gorzowie Wlkp. — na miejscu, na wynos i z dowozem
+          bezpłatnym od 17 zł.
+        </p>
+        <div class="footer__social">
+          <a
+            href="https://www.facebook.com/pages/ALLE-Pizza/259133014165395"
+            target="_blank"
+            rel="noopener"
+            aria-label="Alle Pizza na Facebooku"
+            ><i class="fa-brands fa-facebook-f" aria-hidden="true"></i
+          ></a>
+          <a
+            href="https://allepizza.papu.io/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Zamów online"
+            ><i class="fa-solid fa-bag-shopping" aria-hidden="true"></i
+          ></a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="footer__heading">Nawigacja</h3>
+        <ul class="footer__list">
+          <li><a href="index.html">Start</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="catering.html">Catering</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer__heading">Kontakt</h3>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+            <a href="tel:+48957352211">95 735 22 11</a>
+          </li>
+          <li class="footer__item">
+            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+            <a href="tel:+48666811237">666 811 237</a>
+          </li>
+          <li class="footer__item">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            <a href="mailto:biuro@allepizza.pl">biuro@allepizza.pl</a>
+          </li>
+          <li class="footer__item">
+            <i class="fa-solid fa-clock" aria-hidden="true"></i>
+            <span>Codziennie 11:00–23:00</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <span>&copy; <span data-year></span> Alle Pizza, Gorzów Wielkopolski</span>
+      <span>Dowóz bezpłatny od 17 zł na terenie Gorzowa</span>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
