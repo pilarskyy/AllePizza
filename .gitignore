@@ -2,6 +2,8 @@
 *.psd
 *.ai
 *.jfif
+*.af
+*~lock~
 
 # OS junk
 .DS_Store

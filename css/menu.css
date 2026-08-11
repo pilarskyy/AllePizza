@@ -72,7 +72,55 @@
   border-top: 1px solid var(--border);
 }
 
-/* ===== 04. FILTER CHIPS ===== */
+/* ===== 04. PIZZA SEARCH ===== */
+.pizza-search {
+  margin-bottom: var(--space-md);
+}
+
+.pizza-search__field {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  max-width: 28rem;
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  background: var(--white);
+  box-shadow: var(--shadow-card);
+}
+
+.pizza-search__field i {
+  color: var(--orange);
+  flex-shrink: 0;
+}
+
+.pizza-search__field:focus-within {
+  border-color: var(--orange);
+}
+
+.pizza-search__field input {
+  flex-grow: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--text);
+  background: transparent;
+}
+
+.pizza-search__field input::placeholder {
+  color: var(--text-muted);
+}
+
+.pizza-search__hint {
+  margin-top: 0.45rem;
+  max-width: 34rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* ===== 05. FILTER CHIPS ===== */
 .filter-chips {
   display: flex;
   flex-wrap: wrap;
@@ -100,7 +148,7 @@
   color: var(--white);
 }
 
-/* ===== 05. PIZZA GRID/CARD ===== */
+/* ===== 06. PIZZA GRID/CARD ===== */
 .pizza-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -165,6 +213,25 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* Calzone photos keep their natural folded/pointed silhouette instead of
+   being clipped into the round pizza disc — the source cutout already has
+   a transparent background, so no circular mask is needed here. */
+.pizza-card__photo--freeform {
+  width: 15rem;
+  height: 12.6rem;
+  top: -6rem;
+  right: -7rem;
+  border-radius: 0;
+  overflow: visible;
+  box-shadow: none;
+  background: none;
+}
+
+.pizza-card__photo--freeform img {
+  object-fit: contain;
+  filter: drop-shadow(0 14px 18px rgba(61, 15, 15, 0.35));
 }
 
 .pizza-card__tags {
@@ -357,7 +424,7 @@
   font-size: 1rem;
 }
 
-/* ===== 06. ALLERGEN LEGEND ===== */
+/* ===== 07. ALLERGEN LEGEND ===== */
 .allergen-legend {
   margin-top: var(--space-xl);
   background: var(--cream);
@@ -386,7 +453,7 @@
   color: var(--navy);
 }
 
-/* ===== 07. SNACK LIST (przekąski) ===== */
+/* ===== 08. SNACK LIST (przekąski) ===== */
 .snack-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -433,7 +500,7 @@
   color: var(--navy);
 }
 
-/* ===== 08. PRICE TABLE (napoje / dodatki) ===== */
+/* ===== 09. PRICE TABLE (napoje / dodatki) ===== */
 .price-table {
   width: 100%;
   background: var(--white);

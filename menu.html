@@ -105,6 +105,24 @@
       <div class="container" data-menu-panels>
         <div class="menu-panel is-active is-all-view" data-tab-panel="pizza">
           <h2 class="menu-panel__heading"><i class="fa-solid fa-pizza-slice" aria-hidden="true"></i> Pizza</h2>
+
+          <div class="pizza-search">
+            <div class="pizza-search__field">
+              <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+              <input
+                type="text"
+                data-pizza-search
+                placeholder="Szukaj po nazwie lub składnikach…"
+                aria-label="Szukaj pizzy po nazwie lub składnikach"
+                autocomplete="off"
+              >
+            </div>
+            <p class="pizza-search__hint">
+              Wpisz min. 4 znaki — wyniki posortują się od najlepiej dopasowanych. Kilka
+              składników oddziel przecinkiem lub spacją, np. „ser, szynka pieczarki”.
+            </p>
+          </div>
+
           <div class="filter-chips" data-filter-chips>
             <button class="filter-chip is-active" type="button" data-filter="wszystkie">Wszystkie</button>
             <button class="filter-chip" type="button" data-filter="wege">
@@ -125,8 +143,8 @@
           <article class="pizza-card" data-tags="wege">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/margharita-mobile.webp">
+                <img src="img/margharita-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               <span class="tag tag--wege"><i class="fa-solid fa-seedling" aria-hidden="true"></i> Wege</span>
@@ -163,8 +181,8 @@
           <article class="pizza-card" data-tags="wege">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/funghi-mobile.webp">
+                <img src="img/funghi-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               <span class="tag tag--wege"><i class="fa-solid fa-seedling" aria-hidden="true"></i> Wege</span>
@@ -201,8 +219,8 @@
           <article class="pizza-card" data-tags="wszystkie">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/vesuvio-mobile.webp">
+                <img src="img/vesuvio-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               </div>
@@ -241,8 +259,8 @@
           <article class="pizza-card" data-tags="wszystkie">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/caruso-mobile.webp">
+                <img src="img/caruso-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               </div>
@@ -281,8 +299,8 @@
           <article class="pizza-card" data-tags="wszystkie">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/capriciosa-mobile.webp">
+                <img src="img/capriciosa-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               </div>
@@ -321,8 +339,8 @@
           <article class="pizza-card" data-tags="wszystkie">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/tomaso-mobile.webp">
+                <img src="img/tomaso-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               </div>
@@ -362,8 +380,8 @@
           <article class="pizza-card" data-tags="wszystkie">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/dekoro-mobile.webp">
+                <img src="img/dekoro-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               </div>
@@ -402,8 +420,8 @@
           <article class="pizza-card" data-tags="wszystkie">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/hawajska-mobile.webp">
+                <img src="img/hawajska-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               </div>
@@ -442,8 +460,8 @@
           <article class="pizza-card" data-tags="wszystkie">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/bolognese-mobile.webp">
+                <img src="img/bolognese-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               </div>
@@ -482,8 +500,8 @@
           <article class="pizza-card" data-tags="wszystkie">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/siciliana-mobile.webp">
+                <img src="img/siciliana-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               </div>
@@ -522,8 +540,8 @@
           <article class="pizza-card" data-tags="wege">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/wegetarianska-1-mobile.webp">
+                <img src="img/wegetarianska-1-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               <span class="tag tag--wege"><i class="fa-solid fa-seedling" aria-hidden="true"></i> Wege</span>
@@ -560,8 +578,8 @@
           <article class="pizza-card" data-tags="wege">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/wegetarianska-2-mobile.webp">
+                <img src="img/wegetarianska-2-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               <span class="tag tag--wege"><i class="fa-solid fa-seedling" aria-hidden="true"></i> Wege</span>
@@ -598,8 +616,8 @@
           <article class="pizza-card" data-tags="ostra">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/corleone-mobile.webp">
+                <img src="img/corleone-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               <span class="tag tag--ostra"><i class="fa-solid fa-pepper-hot" aria-hidden="true"></i> Ostra</span>
@@ -642,8 +660,8 @@
           <article class="pizza-card" data-tags="wszystkie">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/spinaci-mobile.webp">
+                <img src="img/spinaci-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               </div>
@@ -682,8 +700,8 @@
           <article class="pizza-card" data-tags="wszystkie">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/morska-mobile.webp">
+                <img src="img/morska-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               </div>
@@ -764,8 +782,8 @@
           <article class="pizza-card" data-tags="wszystkie">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/tonno-mobile.webp">
+                <img src="img/tonno-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               </div>
@@ -802,8 +820,8 @@
           <article class="pizza-card" data-tags="wszystkie">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/carato-mobile.webp">
+                <img src="img/carato-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               </div>
@@ -845,8 +863,8 @@
           <article class="pizza-card" data-tags="wszystkie">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/americana-mobile.webp">
+                <img src="img/americana-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               </div>
@@ -885,8 +903,8 @@
           <article class="pizza-card" data-tags="wszystkie">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/verona-mobile.webp">
+                <img src="img/verona-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               </div>
@@ -928,8 +946,8 @@
           <article class="pizza-card" data-tags="wszystkie">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/wiejska-mobile.webp">
+                <img src="img/wiejska-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               </div>
@@ -971,8 +989,8 @@
           <article class="pizza-card" data-tags="wszystkie">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/farmerska-mobile.webp">
+                <img src="img/farmerska-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               </div>
@@ -1008,8 +1026,8 @@
           <article class="pizza-card" data-tags="wszystkie">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/chickenpizza-mobile.webp">
+                <img src="img/chickenpizza-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               </div>
@@ -1045,8 +1063,8 @@
           <article class="pizza-card" data-tags="wszystkie">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/salami-mobile.webp">
+                <img src="img/salami-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               </div>
@@ -1085,8 +1103,8 @@
           <article class="pizza-card" data-tags="ostra">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/peperoni-mobile.webp">
+                <img src="img/peperoni-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               <span class="tag tag--ostra"><i class="fa-solid fa-pepper-hot" aria-hidden="true"></i> Ostra</span>
@@ -1126,8 +1144,8 @@
           <article class="pizza-card" data-tags="ostra">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/la-mafia-mobile.webp">
+                <img src="img/la-mafia-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               <span class="tag tag--ostra"><i class="fa-solid fa-pepper-hot" aria-hidden="true"></i> Ostra</span>
@@ -1170,8 +1188,8 @@
           <article class="pizza-card" data-tags="ostra">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/mexicana-mobile.webp">
+                <img src="img/mexicana-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               <span class="tag tag--ostra"><i class="fa-solid fa-pepper-hot" aria-hidden="true"></i> Ostra</span>
@@ -1209,8 +1227,8 @@
           <article class="pizza-card" data-tags="ostra">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/vito-mobile.webp">
+                <img src="img/vito-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               <span class="tag tag--ostra"><i class="fa-solid fa-pepper-hot" aria-hidden="true"></i> Ostra</span>
@@ -1254,8 +1272,8 @@
           <article class="pizza-card" data-tags="wszystkie">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/italiana-mobile.webp">
+                <img src="img/italiana-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               </div>
@@ -1297,8 +1315,8 @@
           <article class="pizza-card" data-tags="wszystkie">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/frutti-di-mare-mobile.webp">
+                <img src="img/frutti-di-mare-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               </div>
@@ -1337,8 +1355,8 @@
           <article class="pizza-card" data-tags="wszystkie">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/karamba-mobile.webp">
+                <img src="img/karamba-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               </div>
@@ -1375,8 +1393,8 @@
           <article class="pizza-card" data-tags="wszystkie">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/toscana-mobile.webp">
+                <img src="img/toscana-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               </div>
@@ -1413,8 +1431,8 @@
           <article class="pizza-card" data-tags="wszystkie">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/palermo-mobile.webp">
+                <img src="img/palermo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               </div>
@@ -1451,8 +1469,8 @@
           <article class="pizza-card" data-tags="wszystkie">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/wenecja-mobile.webp">
+                <img src="img/wenecja-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               </div>
@@ -1494,8 +1512,8 @@
           <article class="pizza-card" data-tags="ostra">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/piekielna-mobile.webp">
+                <img src="img/piekielna-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               <span class="tag tag--ostra"><i class="fa-solid fa-pepper-hot" aria-hidden="true"></i> Ostra</span>
@@ -1535,8 +1553,8 @@
           <article class="pizza-card" data-tags="wszystkie">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/pablo-mobile.webp">
+                <img src="img/pablo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               </div>
@@ -1578,8 +1596,8 @@
           <article class="pizza-card" data-tags="wszystkie">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/gyros-mobile.webp">
+                <img src="img/gyros-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               </div>
@@ -1616,8 +1634,8 @@
           <article class="pizza-card" data-tags="wszystkie">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/kebab-mobile.webp">
+                <img src="img/kebab-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               </div>
@@ -1654,8 +1672,8 @@
           <article class="pizza-card" data-tags="wszystkie">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/alle-pizza-mobile.webp">
+                <img src="img/alle-pizza-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               </div>
@@ -1691,8 +1709,8 @@
           <article class="pizza-card" data-tags="wszystkie">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/syta-mobile.webp">
+                <img src="img/syta-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               </div>
@@ -1734,8 +1752,8 @@
           <article class="pizza-card" data-tags="wszystkie">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/romana-mobile.webp">
+                <img src="img/romana-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               </div>
@@ -1777,8 +1795,8 @@
           <article class="pizza-card" data-tags="wszystkie">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/tomato-mobile.webp">
+                <img src="img/tomato-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               </div>
@@ -1817,8 +1835,8 @@
           <article class="pizza-card" data-tags="ostra">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/soprano-mobile.webp">
+                <img src="img/soprano-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               <span class="tag tag--ostra"><i class="fa-solid fa-pepper-hot" aria-hidden="true"></i> Ostra</span>
@@ -1857,9 +1875,9 @@
           </article>
           <article class="pizza-card" data-tags="wszystkie">
             <div class="pizza-card__top">
-              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo pizza-card__photo--freeform">
+                <source media="(max-width: 640px)" srcset="img/calzone-mobile.webp">
+                <img src="img/calzone-desktop.webp" width="480" height="403" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               </div>
@@ -1896,9 +1914,9 @@
           </article>
           <article class="pizza-card" data-tags="wszystkie">
             <div class="pizza-card__top">
-              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo pizza-card__photo--freeform">
+                <source media="(max-width: 640px)" srcset="img/calzone-mobile.webp">
+                <img src="img/calzone-desktop.webp" width="480" height="403" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               </div>
@@ -1935,9 +1953,9 @@
           </article>
           <article class="pizza-card" data-tags="wszystkie">
             <div class="pizza-card__top">
-              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+              <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo pizza-card__photo--freeform">
+                <source media="(max-width: 640px)" srcset="img/calzone-mobile.webp">
+                <img src="img/calzone-desktop.webp" width="480" height="403" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               </div>
@@ -1975,8 +1993,8 @@
           <article class="pizza-card" data-tags="wszystkie">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/pol-na-pol-mobile.webp">
+                <img src="img/pol-na-pol-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               </div>
@@ -1995,8 +2013,8 @@
           <article class="pizza-card" data-tags="nowosc">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/roma-mobile.webp">
+                <img src="img/roma-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               <span class="tag tag--nowosc"><i class="fa-solid fa-star" aria-hidden="true"></i> Nowość</span>
@@ -2034,8 +2052,8 @@
           <article class="pizza-card" data-tags="ostra nowosc">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/jalapenos-mobile.webp">
+                <img src="img/jalapenos-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               <span class="tag tag--ostra"><i class="fa-solid fa-pepper-hot" aria-hidden="true"></i> Ostra</span>
@@ -2076,8 +2094,8 @@
           <article class="pizza-card" data-tags="ostra nowosc">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/napoli-mobile.webp">
+                <img src="img/napoli-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               <span class="tag tag--ostra"><i class="fa-solid fa-pepper-hot" aria-hidden="true"></i> Ostra</span>
@@ -2121,8 +2139,8 @@
           <article class="pizza-card" data-tags="ostra nowosc bianca">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/piccante-peperoni-salsicia-mobile.webp">
+                <img src="img/piccante-peperoni-salsicia-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               <span class="tag tag--ostra"><i class="fa-solid fa-pepper-hot" aria-hidden="true"></i> Ostra</span>
@@ -2165,8 +2183,8 @@
           <article class="pizza-card" data-tags="nowosc bianca">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/puliciana-mobile.webp">
+                <img src="img/puliciana-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               <span class="tag tag--nowosc"><i class="fa-solid fa-star" aria-hidden="true"></i> Nowość</span>
@@ -2208,8 +2226,8 @@
           <article class="pizza-card" data-tags="nowosc bianca">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/carbonara-mobile.webp">
+                <img src="img/carbonara-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               <span class="tag tag--nowosc"><i class="fa-solid fa-star" aria-hidden="true"></i> Nowość</span>
@@ -2251,8 +2269,8 @@
           <article class="pizza-card" data-tags="ostra nowosc bianca">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/diavola-mobile.webp">
+                <img src="img/diavola-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               <span class="tag tag--ostra"><i class="fa-solid fa-pepper-hot" aria-hidden="true"></i> Ostra</span>
@@ -2295,8 +2313,8 @@
           <article class="pizza-card" data-tags="nowosc bianca">
             <div class="pizza-card__top">
               <div class="pizza-card__photo-mask" aria-hidden="true"><picture class="pizza-card__photo">
-                <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
-                <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
+                <source media="(max-width: 640px)" srcset="img/alle-pizza-bianca-mobile.webp">
+                <img src="img/alle-pizza-bianca-desktop.webp" width="360" height="360" alt="" loading="lazy" decoding="async">
               </picture></div>
               <div class="pizza-card__tags">
               <span class="tag tag--nowosc"><i class="fa-solid fa-star" aria-hidden="true"></i> Nowość</span>
@@ -2338,7 +2356,7 @@
           </div>
 
           <p class="filter-empty" data-filter-empty hidden>
-            Brak pizzy pasującej do wybranego filtra.
+            Brak pizzy pasującej do wybranych kryteriów.
           </p>
 
           <details class="allergen-legend">
