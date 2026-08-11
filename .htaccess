@@ -1,0 +1,16 @@
+# Wyłącz cache przeglądarki dla plików strony — zwykłe odświeżenie (F5)
+# zawsze pobiera najnowszą wersję z serwera zamiast starej wersji z pamięci
+# podręcznej. Przeglądarka i tak nie ściąga pliku ponownie, jeśli się nie
+# zmienił (dostaje 304 Not Modified) — tylko realne zmiany są przesyłane.
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html?|css|js|json|svg|webp|png|jpe?g|gif|ico|woff2?)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive Off
+</IfModule>
+
+FileETag MTime Size

@@ -1,6 +1,7 @@
 # Source/working files not needed for the deployed site
 *.psd
 *.ai
+*.jfif
 
 # OS junk
 .DS_Store

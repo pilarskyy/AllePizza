@@ -50,6 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
   tabButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
       const target = btn.dataset.tabTarget;
+      const showAll = target === "wszystko";
 
       tabButtons.forEach((b) => {
         b.classList.toggle("is-active", b === btn);
@@ -57,7 +58,9 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       tabPanels.forEach((panel) => {
-        panel.classList.toggle("is-active", panel.dataset.tabPanel === target);
+        const isMatch = showAll || panel.dataset.tabPanel === target;
+        panel.classList.toggle("is-active", isMatch);
+        panel.classList.toggle("is-all-view", showAll);
       });
     });
   });

@@ -29,22 +29,6 @@
   <a class="skip-link" href="#main">Przejdź do treści</a>
 
   <header class="header" data-header>
-    <div class="header__strip">
-      <div class="container header__strip-inner">
-        <span class="header__strip-item"
-          ><i class="fa-solid fa-clock" aria-hidden="true"></i> Czynne codziennie
-          11:00–23:00</span
-        >
-        <span class="header__strip-item"
-          ><i class="fa-solid fa-motorcycle" aria-hidden="true"></i> Dowóz gratis od
-          17 zł na terenie Gorzowa</span
-        >
-        <a href="tel:+48957352211" class="header__strip-item"
-          ><i class="fa-solid fa-phone" aria-hidden="true"></i> 95 735 22 11</a
-        >
-      </div>
-    </div>
-
     <div class="container header__bar">
       <a href="index.html" class="logo">
         <img src="img/logo.webp" alt="Alle Pizza" width="241" height="149" />
@@ -82,9 +66,15 @@
   </div>
 
   <main id="main">
-    <div class="page-hero" style="background: linear-gradient(120deg, var(--navy), var(--navy-light));">
+    <div class="page-hero">
+      <div class="page-hero__photo" aria-hidden="true">
+        <picture>
+          <source media="(max-width: 640px)" srcset="img/pizza-hero-mobile.webp">
+          <img src="img/pizza-hero-desktop.webp" width="1024" height="559" alt="" loading="eager" decoding="async">
+        </picture>
+      </div>
       <div class="container">
-        <h1 style="color: var(--white);">Catering</h1>
+        <h1>Catering</h1>
         <p>Pizza na firmowe eventy, szkolenia i szkolne uroczystości.</p>
       </div>
     </div>

@@ -1,19 +1,5 @@
-/* ===== 01. PAGE HEADER ===== */
-.page-hero {
-  background: linear-gradient(120deg, var(--navy), var(--navy-light));
-  color: var(--white);
-  padding-block: var(--space-lg);
-  text-align: center;
-}
-
-.page-hero h1 {
-  color: var(--white);
-  margin-bottom: 0.4rem;
-}
-
-.page-hero p {
-  color: rgba(255, 255, 255, 0.7);
-}
+/* Page header banner (.page-hero) now lives in base.css so it's shared
+   with catering.html and kontakt.html too. */
 
 /* ===== 02. CATEGORY TABS ===== */
 .menu-tabs {
@@ -62,6 +48,28 @@
 
 .menu-panel.is-active {
   display: block;
+}
+
+.menu-panel__heading {
+  display: none;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.5rem;
+  margin-bottom: var(--space-md);
+}
+
+.menu-panel__heading i {
+  color: var(--orange);
+}
+
+.menu-panel.is-all-view .menu-panel__heading {
+  display: flex;
+}
+
+.menu-panel.is-all-view:not([data-tab-panel="pizza"]) {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-xl);
+  border-top: 1px solid var(--border);
 }
 
 /* ===== 04. FILTER CHIPS ===== */
@@ -120,10 +128,6 @@
   align-items: flex-start;
   justify-content: flex-start;
   gap: 0.5rem;
-  min-height: 6.5rem;
-  /* reserve room for the photo bleeding from the corner so it never
-     overlaps the name/ingredients text below */
-  padding-right: 8.5rem;
 }
 
 /* Clips ONLY the product photo to the card's rounded rectangle. This is
@@ -141,8 +145,9 @@
 
 /* Product photo bleeds off the card's top-right corner, clipped by
    .pizza-card__photo-mask so only roughly half of it ever shows and
-   nothing pokes past the tile. .pizza-card__top's min-height/
-   padding-right keep it clear of the text. */
+   nothing pokes past the tile. The card is intentionally allowed to be
+   shorter than the photo: name/ingredients/tags sit at z-index:1 (mask
+   is z-index:0) so they stay legible on top wherever they overlap it. */
 .pizza-card__photo {
   position: absolute;
   top: -7rem;
@@ -167,7 +172,7 @@
   z-index: 1;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: flex-start;
   gap: 0.35rem;
 }
 
@@ -203,11 +208,26 @@
   color: #2f7a3f;
 }
 
+/* White glow instead of a visible shadow: invisible on the card's white
+   background, but keeps the text readable where it overlaps the photo. */
+.pizza-card__name,
+.pizza-card__ingredients {
+  text-shadow:
+    0 0 4px var(--white),
+    0 0 4px var(--white),
+    0 0 8px var(--white),
+    0 0 8px var(--white);
+}
+
 .pizza-card__name {
+  position: relative;
+  z-index: 1;
   font-size: 1.1rem;
 }
 
 .pizza-card__ingredients {
+  position: relative;
+  z-index: 1;
   font-size: 0.9rem;
   flex-grow: 1;
 }
@@ -387,12 +407,24 @@
   margin-bottom: var(--space-sm);
 }
 
+.snack-card .snack-icon {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  margin-inline: auto;
+  margin-bottom: var(--space-sm);
+}
+
 .snack-card h3 {
   margin-bottom: 0.3rem;
 }
 
 .snack-card p {
   font-size: 0.9rem;
+  margin-bottom: 0.6rem;
+}
+
+.snack-card .pizza-card__allergens-wrap {
   margin-bottom: 0.6rem;
 }
 

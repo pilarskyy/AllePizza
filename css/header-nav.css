@@ -20,36 +20,6 @@
   padding-block: 0.9rem;
 }
 
-/* ===== 02. TOP INFO STRIP ===== */
-.header__strip {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  font-size: 0.85rem;
-}
-
-.header__strip-inner {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
-  padding-block: 0.5rem;
-  color: rgba(255, 255, 255, 0.75);
-}
-
-.header__strip-inner a {
-  color: inherit;
-}
-
-.header__strip-inner a:hover {
-  color: var(--orange);
-}
-
-.header__strip-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-
 /* ===== 03. LOGO ===== */
 .logo {
   display: inline-flex;
@@ -186,12 +156,6 @@
 }
 
 @media (max-width: 640px) {
-  /* the top info strip (hours/delivery/phone) is redundant with the
-     call bar below on small screens, and eats scarce vertical space */
-  .header__strip {
-    display: none;
-  }
-
   body {
     padding-bottom: 4.5rem;
   }

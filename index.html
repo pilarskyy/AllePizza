@@ -29,22 +29,6 @@
   <a class="skip-link" href="#main">Przejdź do treści</a>
 
   <header class="header" data-header>
-    <div class="header__strip">
-      <div class="container header__strip-inner">
-        <span class="header__strip-item"
-          ><i class="fa-solid fa-clock" aria-hidden="true"></i> Czynne codziennie
-          11:00–23:00</span
-        >
-        <span class="header__strip-item"
-          ><i class="fa-solid fa-motorcycle" aria-hidden="true"></i> Dowóz gratis od
-          17 zł na terenie Gorzowa</span
-        >
-        <a href="tel:+48957352211" class="header__strip-item"
-          ><i class="fa-solid fa-phone" aria-hidden="true"></i> 95 735 22 11</a
-        >
-      </div>
-    </div>
-
     <div class="container header__bar">
       <a href="index.html" class="logo">
         <img src="img/logo.webp" alt="Alle Pizza" width="241" height="149" />
@@ -85,10 +69,6 @@
     <section class="hero">
       <div class="container hero__grid">
         <div>
-          <span class="hero__eyebrow"
-            ><i class="fa-solid fa-star" aria-hidden="true"></i> Gorzów Wlkp. od 15
-            lat</span
-          >
           <h1>Najlepsza <em>pizza</em> w Gorzowie prosto do Twoich drzwi</h1>
           <p class="hero__lead">
             Świeże ciasto, sprawdzone składniki i 55 smaków do wyboru. Zamawiaj
@@ -128,7 +108,10 @@
             ><i class="fa-solid fa-fire"></i> 55 pozycji w menu</span
           >
           <div class="hero__disc">
-            <i class="fa-solid fa-pizza-slice"></i>
+            <picture>
+              <source media="(max-width: 640px)" srcset="img/pizza-photo-mobile.webp">
+              <img src="img/pizza-photo-desktop.webp" width="360" height="360" alt="Pizza pepperoni Alle Pizza" loading="eager" decoding="async">
+            </picture>
           </div>
           <span class="hero__chip hero__chip--bottom"
             ><i class="fa-solid fa-award"></i> 15 lat doświadczenia</span
@@ -204,25 +187,19 @@
 
         <div class="teaser-grid">
           <article class="teaser-card">
-            <span class="icon-badge icon-badge--lg"
-              ><i class="fa-solid fa-bread-slice" aria-hidden="true"></i
-            ></span>
+            <img src="img/icons/panini.svg" alt="" class="snack-icon" width="64" height="64" loading="lazy">
             <h3>Pyszne panini</h3>
             <p>20 szt. z masłem czosnkowym — chrupiące i aromatyczne.</p>
             <a class="btn btn--dark btn--sm" href="menu.html#przekaski">Zobacz w menu</a>
           </article>
           <article class="teaser-card">
-            <span class="icon-badge icon-badge--lg"
-              ><i class="fa-solid fa-drumstick-bite" aria-hidden="true"></i
-            ></span>
+            <img src="img/icons/skrzydelka.svg" alt="" class="snack-icon" width="64" height="64" loading="lazy">
             <h3>Skrzydełka</h3>
             <p>Pikantne skrzydełka w trzech porcjach — 10, 15 lub 20 sztuk.</p>
             <a class="btn btn--dark btn--sm" href="menu.html#przekaski">Zobacz w menu</a>
           </article>
           <article class="teaser-card">
-            <span class="icon-badge icon-badge--lg"
-              ><i class="fa-solid fa-french-fries" aria-hidden="true"></i
-            ></span>
+            <img src="img/icons/frytki.svg" alt="" class="snack-icon" width="64" height="64" loading="lazy">
             <h3>Frytki</h3>
             <p>Chrupiące frytki — świetny dodatek do każdego zamówienia.</p>
             <a class="btn btn--dark btn--sm" href="menu.html#przekaski">Zobacz w menu</a>

@@ -14,20 +14,6 @@
   align-items: center;
 }
 
-.hero__eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: rgba(194, 68, 10, 0.15);
-  color: var(--orange);
-  border: 1px solid rgba(194, 68, 10, 0.4);
-  padding: 0.4rem 0.9rem;
-  border-radius: var(--radius-pill);
-  font-weight: 700;
-  font-size: 0.85rem;
-  margin-bottom: var(--space-sm);
-}
-
 .hero h1 {
   color: var(--white);
   margin-bottom: var(--space-sm);
@@ -70,7 +56,7 @@
   color: var(--orange);
 }
 
-/* ===== 02. HERO VISUAL (icon composition, no photo) ===== */
+/* ===== 02. HERO VISUAL (photo disc) ===== */
 .hero__visual {
   position: relative;
   display: grid;
@@ -78,30 +64,54 @@
 }
 
 .hero__disc {
-  width: min(22rem, 100%);
+  position: relative;
+  z-index: 1;
+  width: min(27rem, 100%);
   aspect-ratio: 1;
   border-radius: 50%;
-  background: radial-gradient(circle at 35% 30%, var(--orange), var(--orange-dark));
-  display: grid;
-  place-items: center;
+  overflow: hidden;
   box-shadow: 0 30px 60px -20px rgba(194, 68, 10, 0.55);
 }
 
-.hero__disc i {
-  font-size: 7rem;
-  color: var(--white);
-  transform: rotate(-15deg);
+.hero__disc picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hero__disc img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: hero-disc-spin 35s linear infinite;
+}
+
+@keyframes hero-disc-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__disc img {
+    animation: none;
+  }
 }
 
 .hero__chip {
   position: absolute;
+  z-index: 2;
   display: flex;
   align-items: center;
   gap: 0.5rem;
   background: var(--white);
   color: var(--text);
   padding: 0.6rem 1rem;
-  border-radius: var(--radius-pill);
+  border-radius: var(--radius-md);
   box-shadow: var(--shadow-card);
   font-weight: 700;
   font-size: 0.85rem;
@@ -111,14 +121,37 @@
   color: var(--orange-dark);
 }
 
+/* Speech-bubble tail, pointing toward the center of the pizza */
+.hero__chip::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 7px solid transparent;
+}
+
 .hero__chip--top {
-  top: -0.5rem;
-  right: 1rem;
+  top: 1.75rem;
+  right: 0.5rem;
+}
+
+.hero__chip--top::after {
+  bottom: -6px;
+  left: 30%;
+  border-bottom: none;
+  border-top-color: var(--white);
 }
 
 .hero__chip--bottom {
-  bottom: -0.5rem;
+  bottom: 1.75rem;
   left: 0.5rem;
+}
+
+.hero__chip--bottom::after {
+  top: -6px;
+  right: 30%;
+  border-top: none;
+  border-bottom-color: var(--white);
 }
 
 /* ===== 03. PROMO RIBBON ===== */
@@ -195,6 +228,14 @@
   margin-bottom: var(--space-sm);
 }
 
+.teaser-card .snack-icon {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  margin-inline: auto;
+  margin-bottom: var(--space-sm);
+}
+
 .teaser-card h3 {
   margin-bottom: 0.3rem;
 }
@@ -238,11 +279,7 @@
   }
 
   .hero__disc {
-    width: 14rem;
-  }
-
-  .hero__disc i {
-    font-size: 4.5rem;
+    width: 17rem;
   }
 
   .highlights {

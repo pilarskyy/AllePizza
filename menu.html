@@ -29,22 +29,6 @@
   <a class="skip-link" href="#main">Przejdź do treści</a>
 
   <header class="header" data-header>
-    <div class="header__strip">
-      <div class="container header__strip-inner">
-        <span class="header__strip-item"
-          ><i class="fa-solid fa-clock" aria-hidden="true"></i> Czynne codziennie
-          11:00–23:00</span
-        >
-        <span class="header__strip-item"
-          ><i class="fa-solid fa-motorcycle" aria-hidden="true"></i> Dowóz gratis od
-          17 zł na terenie Gorzowa</span
-        >
-        <a href="tel:+48957352211" class="header__strip-item"
-          ><i class="fa-solid fa-phone" aria-hidden="true"></i> 95 735 22 11</a
-        >
-      </div>
-    </div>
-
     <div class="container header__bar">
       <a href="index.html" class="logo">
         <img src="img/logo.webp" alt="Alle Pizza" width="241" height="149" />
@@ -83,6 +67,12 @@
 
   <main id="main">
     <div class="page-hero">
+      <div class="page-hero__photo" aria-hidden="true">
+        <picture>
+          <source media="(max-width: 640px)" srcset="img/pizza-hero-mobile.webp">
+          <img src="img/pizza-hero-desktop.webp" width="1024" height="559" alt="" loading="eager" decoding="async">
+        </picture>
+      </div>
       <div class="container">
         <h1>Menu</h1>
         <p>55 pizz, przekąski, napoje i dodatki — wybierz swój ulubiony smak.</p>
@@ -92,7 +82,10 @@
     <div class="menu-tabs">
       <div class="container">
         <div class="menu-tabs__list" role="tablist" aria-label="Kategorie menu" data-menu-tabs>
-          <button class="menu-tabs__btn is-active" type="button" role="tab" aria-selected="true" data-tab-target="pizza">
+          <button class="menu-tabs__btn is-active" type="button" role="tab" aria-selected="true" data-tab-target="wszystko">
+            <i class="fa-solid fa-layer-group" aria-hidden="true"></i> Wszystko
+          </button>
+          <button class="menu-tabs__btn" type="button" role="tab" aria-selected="false" data-tab-target="pizza">
             <i class="fa-solid fa-pizza-slice" aria-hidden="true"></i> Pizza
           </button>
           <button class="menu-tabs__btn" type="button" role="tab" aria-selected="false" data-tab-target="przekaski">
@@ -109,8 +102,9 @@
     </div>
 
     <section class="section" id="pizza">
-      <div class="container">
-        <div class="menu-panel is-active" data-tab-panel="pizza">
+      <div class="container" data-menu-panels>
+        <div class="menu-panel is-active is-all-view" data-tab-panel="pizza">
+          <h2 class="menu-panel__heading"><i class="fa-solid fa-pizza-slice" aria-hidden="true"></i> Pizza</h2>
           <div class="filter-chips" data-filter-chips>
             <button class="filter-chip is-active" type="button" data-filter="wszystkie">Wszystkie</button>
             <button class="filter-chip" type="button" data-filter="wege">
@@ -147,7 +141,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-1"
         >
-          Alergeny: 1, 7
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-1">
@@ -185,7 +179,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-2"
         >
-          Alergeny: 1, 7
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-2">
@@ -222,7 +216,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-3"
         >
-          Alergeny: 1, 6, 7, 9, 10
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-3">
@@ -262,7 +256,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-4"
         >
-          Alergeny: 1, 6, 7, 9, 10
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-4">
@@ -302,7 +296,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-5"
         >
-          Alergeny: 1, 6, 7, 9, 10
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-5">
@@ -342,7 +336,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-6"
         >
-          Alergeny: 1, 2, 6, 7, 9, 10
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-6">
@@ -383,7 +377,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-7"
         >
-          Alergeny: 1, 6, 7, 9, 10
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-7">
@@ -423,7 +417,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-8"
         >
-          Alergeny: 1, 6, 7, 9, 10
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-8">
@@ -463,7 +457,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-9"
         >
-          Alergeny: 1, 6, 7, 9, 10
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-9">
@@ -503,7 +497,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-10"
         >
-          Alergeny: 1, 6, 7, 9, 10
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-10">
@@ -544,7 +538,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-11"
         >
-          Alergeny: 1, 7
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-11">
@@ -582,7 +576,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-12"
         >
-          Alergeny: 1, 7
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-12">
@@ -620,7 +614,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-13"
         >
-          Alergeny: 1, 3, 5, 7, 8, 9, 10, 11
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-13">
@@ -663,7 +657,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-14"
         >
-          Alergeny: 1, 6, 7, 9, 10
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-14">
@@ -703,7 +697,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-15"
         >
-          Alergeny: 1, 2, 4, 7, 14
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-15">
@@ -743,7 +737,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-16"
         >
-          Alergeny: 1, 2, 6, 7, 9, 10, 14
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-16">
@@ -785,7 +779,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-17"
         >
-          Alergeny: 1, 4, 7
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-17">
@@ -823,7 +817,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-18"
         >
-          Alergeny: 1, 3, 5, 7, 8, 9, 10, 11
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-18">
@@ -866,7 +860,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-19"
         >
-          Alergeny: 1, 6, 7, 9, 10
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-19">
@@ -906,7 +900,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-20"
         >
-          Alergeny: 1, 3, 5, 7, 8, 9, 10, 11
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-20">
@@ -949,7 +943,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-21"
         >
-          Alergeny: 1, 3, 5, 7, 8, 9, 10, 11
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-21">
@@ -992,7 +986,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-22"
         >
-          Alergeny: 1, 7
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-22">
@@ -1029,7 +1023,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-23"
         >
-          Alergeny: 1, 7
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-23">
@@ -1066,7 +1060,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-24"
         >
-          Alergeny: 1, 6, 7, 9, 10
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-24">
@@ -1107,7 +1101,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-25"
         >
-          Alergeny: 1, 6, 7, 9, 10
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-25">
@@ -1148,7 +1142,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-26"
         >
-          Alergeny: 1, 3, 5, 7, 8, 9, 10, 11
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-26">
@@ -1192,7 +1186,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-27"
         >
-          Alergeny: 1, 6, 7
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-27">
@@ -1231,7 +1225,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-28"
         >
-          Alergeny: 1, 2, 3, 5, 7, 8, 9, 10, 11
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-28">
@@ -1275,7 +1269,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-29"
         >
-          Alergeny: 1, 3, 5, 7, 8, 9, 10, 11
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-29">
@@ -1318,7 +1312,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-30"
         >
-          Alergeny: 1, 2, 4, 7, 14
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-30">
@@ -1358,7 +1352,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-31"
         >
-          Alergeny: 1, 6, 7
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-31">
@@ -1396,7 +1390,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-32"
         >
-          Alergeny: 1, 6, 7
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-32">
@@ -1434,7 +1428,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-33"
         >
-          Alergeny: 1, 6, 7
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-33">
@@ -1472,7 +1466,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-34"
         >
-          Alergeny: 1, 3, 5, 7, 8, 9, 10, 11
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-34">
@@ -1516,7 +1510,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-35"
         >
-          Alergeny: 1, 6, 7, 9, 10
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-35">
@@ -1556,7 +1550,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-36"
         >
-          Alergeny: 1, 3, 5, 7, 8, 9, 10, 11
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-36">
@@ -1599,7 +1593,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-37"
         >
-          Alergeny: 1, 6, 7
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-37">
@@ -1637,7 +1631,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-38"
         >
-          Alergeny: 1, 6, 7
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-38">
@@ -1675,7 +1669,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-39"
         >
-          Alergeny: 1, 7
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-39">
@@ -1712,7 +1706,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-40"
         >
-          Alergeny: 1, 3, 5, 7, 8, 9, 10, 11
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-40">
@@ -1755,7 +1749,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-41"
         >
-          Alergeny: 1, 3, 5, 7, 8, 9, 10, 11
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-41">
@@ -1798,7 +1792,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-42"
         >
-          Alergeny: 1, 6, 7, 9, 10
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-42">
@@ -1839,7 +1833,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-43"
         >
-          Alergeny: 1, 6, 7, 9, 10
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-43">
@@ -1879,7 +1873,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-44"
         >
-          Alergeny: 1, 6, 7, 9, 10
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-44">
@@ -1918,7 +1912,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-45"
         >
-          Alergeny: 1, 6, 7, 9, 10
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-45">
@@ -1957,7 +1951,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-46"
         >
-          Alergeny: 1, 6, 7, 9, 10
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-46">
@@ -2017,7 +2011,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-47"
         >
-          Alergeny: 1, 6, 7
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-47">
@@ -2057,7 +2051,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-48"
         >
-          Alergeny: 1, 6, 7, 9, 10
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-48">
@@ -2099,7 +2093,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-49"
         >
-          Alergeny: 1, 3, 5, 7, 8, 9, 10, 11
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-49">
@@ -2145,7 +2139,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-50"
         >
-          Alergeny: 1, 6, 7, 8, 9, 10
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-50">
@@ -2188,7 +2182,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-51"
         >
-          Alergeny: 1, 6, 7, 8, 9, 10
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-51">
@@ -2231,7 +2225,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-52"
         >
-          Alergeny: 1, 6, 7, 8, 9, 10
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-52">
@@ -2275,7 +2269,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-53"
         >
-          Alergeny: 1, 6, 7, 8, 9, 10
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-53">
@@ -2318,7 +2312,7 @@
           aria-expanded="false"
           aria-describedby="allergen-tip-54"
         >
-          Alergeny: 1, 6, 7, 8, 9, 10
+          Alergeny
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         </button>
         <div class="allergen-tooltip" role="tooltip" id="allergen-tip-54">
@@ -2371,45 +2365,98 @@
           </details>
         </div>
 
-        <div class="menu-panel" data-tab-panel="przekaski" id="przekaski">
+        <div class="menu-panel is-active is-all-view" data-tab-panel="przekaski" id="przekaski">
+          <h2 class="menu-panel__heading"><i class="fa-solid fa-drumstick-bite" aria-hidden="true"></i> Przekąski</h2>
           <div class="snack-grid">
             <article class="snack-card">
-              <span class="icon-badge icon-badge--lg"><i class="fa-solid fa-bread-slice" aria-hidden="true"></i></span>
+              <img src="img/icons/panini.svg" alt="" class="snack-icon" width="64" height="64" loading="lazy">
               <h3>Pyszne panini</h3>
               <p>20 szt. z dodatkiem masła czosnkowego</p>
               <p class="snack-card__price">18,50 zł</p>
               <p class="pizza-card__allergens">Dodatkowe masełko — 5,50 zł</p>
             </article>
             <article class="snack-card">
-              <span class="icon-badge icon-badge--lg"><i class="fa-solid fa-drumstick-bite" aria-hidden="true"></i></span>
+              <img src="img/icons/skrzydelka.svg" alt="" class="snack-icon" width="64" height="64" loading="lazy">
               <h3>Pikantne skrzydełka</h3>
-              <p class="pizza-card__allergens">Alergeny: 1, 6</p>
+              <div class="pizza-card__allergens-wrap">
+                <button
+                  type="button"
+                  class="allergen-trigger"
+                  aria-expanded="false"
+                  aria-describedby="allergen-tip-snack-1"
+                >
+                  Alergeny
+                  <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                </button>
+                <div class="allergen-tooltip" role="tooltip" id="allergen-tip-snack-1">
+                  <p class="allergen-tooltip__title">Zawiera:</p>
+                  <ul class="allergen-tooltip__list">
+                    <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+                    <li><strong>6</strong> Soja i produkty pochodne</li>
+                  </ul>
+                </div>
+              </div>
               <p class="snack-card__price">10 szt. — 30,00 zł</p>
               <p class="snack-card__price">15 szt. — 42,00 zł</p>
               <p class="snack-card__price">20 szt. — 49,00 zł</p>
             </article>
             <article class="snack-card">
-              <span class="icon-badge icon-badge--lg"><i class="fa-solid fa-drumstick-bite" aria-hidden="true"></i></span>
+              <img src="img/icons/nuggetsy.svg" alt="" class="snack-icon" width="64" height="64" loading="lazy">
               <h3>Nuggetsy</h3>
-              <p class="pizza-card__allergens">Alergeny: 1, 6</p>
+              <div class="pizza-card__allergens-wrap">
+                <button
+                  type="button"
+                  class="allergen-trigger"
+                  aria-expanded="false"
+                  aria-describedby="allergen-tip-snack-2"
+                >
+                  Alergeny
+                  <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                </button>
+                <div class="allergen-tooltip" role="tooltip" id="allergen-tip-snack-2">
+                  <p class="allergen-tooltip__title">Zawiera:</p>
+                  <ul class="allergen-tooltip__list">
+                    <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+                    <li><strong>6</strong> Soja i produkty pochodne</li>
+                  </ul>
+                </div>
+              </div>
               <p class="snack-card__price">10 szt. — 21,00 zł</p>
             </article>
             <article class="snack-card">
-              <span class="icon-badge icon-badge--lg"><i class="fa-solid fa-child" aria-hidden="true"></i></span>
+              <img src="img/icons/zestaw-dziecko.svg" alt="" class="snack-icon" width="64" height="64" loading="lazy">
               <h3>Zestaw dziecięcy</h3>
               <p>Nuggetsy 6 szt. z frytkami</p>
-              <p class="pizza-card__allergens">Alergeny: 1, 6</p>
+              <div class="pizza-card__allergens-wrap">
+                <button
+                  type="button"
+                  class="allergen-trigger"
+                  aria-expanded="false"
+                  aria-describedby="allergen-tip-snack-3"
+                >
+                  Alergeny
+                  <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                </button>
+                <div class="allergen-tooltip" role="tooltip" id="allergen-tip-snack-3">
+                  <p class="allergen-tooltip__title">Zawiera:</p>
+                  <ul class="allergen-tooltip__list">
+                    <li><strong>1</strong> Gluten (pszenica, żyto, jęczmień, owies, orkisz)</li>
+                    <li><strong>6</strong> Soja i produkty pochodne</li>
+                  </ul>
+                </div>
+              </div>
               <p class="snack-card__price">19,00 zł</p>
             </article>
             <article class="snack-card">
-              <span class="icon-badge icon-badge--lg"><i class="fa-solid fa-french-fries" aria-hidden="true"></i></span>
+              <img src="img/icons/frytki.svg" alt="" class="snack-icon" width="64" height="64" loading="lazy">
               <h3>Frytki</h3>
               <p class="snack-card__price">13,00 zł</p>
             </article>
           </div>
         </div>
 
-        <div class="menu-panel" data-tab-panel="napoje" id="napoje">
+        <div class="menu-panel is-active is-all-view" data-tab-panel="napoje" id="napoje">
+          <h2 class="menu-panel__heading"><i class="fa-solid fa-bottle-water" aria-hidden="true"></i> Napoje</h2>
           <table class="price-table">
             <thead>
               <tr>
@@ -2438,7 +2485,8 @@
           </table>
         </div>
 
-        <div class="menu-panel" data-tab-panel="dodatki" id="dodatki">
+        <div class="menu-panel is-active is-all-view" data-tab-panel="dodatki" id="dodatki">
+          <h2 class="menu-panel__heading"><i class="fa-solid fa-plus" aria-hidden="true"></i> Dodatki do pizzy</h2>
           <table class="price-table">
             <thead>
               <tr>
