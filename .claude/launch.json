@@ -4,8 +4,9 @@
     {
       "name": "allepizza-dev",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8097"],
-      "port": 8097
+      "runtimeArgs": ["-c", "import os,http.server,socketserver; PORT=int(os.environ.get('PORT', 8097)); socketserver.TCPServer(('', PORT), http.server.SimpleHTTPRequestHandler).serve_forever()"],
+      "port": 8097,
+      "autoPort": true
     }
   ]
 }

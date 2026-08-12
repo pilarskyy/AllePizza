@@ -1,0 +1,23 @@
+# Alle Pizza
+
+> Pizzeria w Gorzowie Wielkopolskim (Polska) — pizza na telefon i online,
+> dowóz gratis od 17 zł, catering firmowy i szkolny. 55 pozycji w menu,
+> otwarte codziennie 11:00–23:00.
+
+## Strony
+
+- [Start](https://allepizza.pl/): Strona główna — oferta, promocje, dane kontaktowe.
+- [Menu](https://allepizza.pl/menu.html): Pełne menu — 55 pizz (32/45 cm), przekąski, napoje, dodatki, ceny i alergeny.
+- [Catering](https://allepizza.pl/catering.html): Oferta cateringu firmowego i szkolnego, rabaty przy zamówieniach grupowych.
+- [Kontakt](https://allepizza.pl/kontakt.html): Telefon, e-mail, godziny otwarcia, linki do zamawiania, FAQ.
+
+## Fakty
+
+- Telefon: +48 95 735 22 11, +48 666 811 237
+- E-mail: biuro@allepizza.pl
+- Adres: Okólna 33A, 66-400 Gorzów Wielkopolski
+- Godziny otwarcia: codziennie 11:00–23:00
+- Dowóz: bezpłatny na terenie Gorzowa Wielkopolskiego przy zamówieniu od 17 zł
+- Promocja: -10% na całe zamówienie, poniedziałek–piątek do 14:00
+- Zamawianie online: https://allepizza.papu.io/, https://pyszne.pl/alle-pizza-gorzow-wielkopolski
+- Facebook: https://www.facebook.com/pages/ALLE-Pizza/259133014165395
