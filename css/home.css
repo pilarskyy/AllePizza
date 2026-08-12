@@ -107,15 +107,16 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transform: scale(1.2);
   animation: hero-disc-spin 35s linear infinite;
 }
 
 @keyframes hero-disc-spin {
   from {
-    transform: rotate(0deg);
+    transform: rotate(0deg) scale(1.2);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(360deg) scale(1.2);
   }
 }
 
@@ -133,48 +134,72 @@
   gap: 0.5rem;
   background: var(--white);
   color: var(--text);
-  padding: 0.6rem 1rem;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-card);
-  font-weight: 700;
+  padding: 0.6rem 1.1rem;
+  border: 3px solid var(--navy);
+  border-radius: 1.3rem 1.6rem 1.5rem 1.7rem;
+  box-shadow: 5px 5px 0 var(--navy);
+  font-weight: 800;
   font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
 }
 
 .hero__chip i {
   color: var(--orange-dark);
-}
-
-/* Speech-bubble tail, pointing toward the center of the pizza */
-.hero__chip::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  border: 7px solid transparent;
+  font-size: 1rem;
 }
 
 .hero__chip--top {
   top: 1.75rem;
   right: 0.5rem;
-}
-
-.hero__chip--top::after {
-  bottom: -6px;
-  left: 30%;
-  border-bottom: none;
-  border-top-color: var(--white);
+  transform: rotate(-4deg);
 }
 
 .hero__chip--bottom {
   bottom: 1.75rem;
   left: 0.5rem;
+  transform: rotate(3deg);
+}
+
+/* Comic speech-bubble tail: bordered double-triangle, pointing toward the pizza */
+.hero__chip::before,
+.hero__chip::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.hero__chip--top::before {
+  bottom: -16px;
+  left: 24%;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  border-top: 16px solid var(--navy);
+}
+
+.hero__chip--top::after {
+  bottom: -12px;
+  left: calc(24% + 3px);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 12px solid var(--white);
+}
+
+.hero__chip--bottom::before {
+  top: -16px;
+  right: 24%;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  border-bottom: 16px solid var(--navy);
 }
 
 .hero__chip--bottom::after {
-  top: -6px;
-  right: 30%;
-  border-top: none;
-  border-bottom-color: var(--white);
+  top: -12px;
+  right: calc(24% + 3px);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 12px solid var(--white);
 }
 
 /* ===== 03. PROMO RIBBON ===== */
