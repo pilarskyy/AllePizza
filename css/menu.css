@@ -148,6 +148,34 @@
   color: var(--white);
 }
 
+/* "Polecane" filter gets the same comic-bubble treatment as the badge
+   and the homepage's .hero__chip, to stand out from the plain pill
+   filters next to it. */
+.filter-chip--polecane {
+  background: var(--white);
+  border: 3px solid var(--navy);
+  border-radius: 1.1rem 1.3rem 1.2rem 1.4rem;
+  box-shadow: 3px 3px 0 var(--navy);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.filter-chip--polecane i {
+  color: var(--orange-dark);
+}
+
+.filter-chip--polecane.is-active {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: var(--white);
+  box-shadow: 3px 3px 0 var(--orange);
+}
+
+.filter-chip--polecane.is-active i {
+  color: var(--orange);
+}
+
 /* ===== 06. PIZZA GRID/CARD ===== */
 .pizza-grid {
   display: grid;
@@ -175,6 +203,35 @@
 
 .pizza-card[hidden] {
   display: none;
+}
+
+/* "Polecane" badge — same comic-bubble treatment as .hero__chip on the
+   homepage — pinned over the tile's top-left corner, spilling slightly
+   outside it, tilted so the left edge sits lower than the right. */
+.pizza-card__badge {
+  position: absolute;
+  top: -0.85rem;
+  left: -0.85rem;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: var(--white);
+  color: var(--text);
+  padding: 0.4rem 0.8rem;
+  border: 3px solid var(--navy);
+  border-radius: 1.1rem 1.3rem 1.2rem 1.4rem;
+  box-shadow: 4px 4px 0 var(--navy);
+  font-weight: 800;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  transform: rotate(-4deg);
+}
+
+.pizza-card__badge i {
+  color: var(--orange-dark);
 }
 
 .pizza-card__top {
@@ -279,11 +336,6 @@
 .tag--wege {
   background: #e3f3e6;
   color: #2f7a3f;
-}
-
-.tag--polecane {
-  background: #fff2c2;
-  color: #8a6300;
 }
 
 /* White glow instead of a visible shadow: invisible on the card's white
@@ -606,29 +658,31 @@
 
 /* Each sauce gets a distinctly different shadow angle/reach — spread
    across magnitudes and directions (including a couple thrown "up")
-   for real hand-drawn scatter instead of six near-identical shadows. */
+   for real hand-drawn scatter instead of six near-identical shadows.
+   A second, lighter shadow mirrors each one in the opposite direction
+   for a bit of layered depth. */
 .sauce-item:nth-child(1) .sauce-item__photo img {
-  filter: drop-shadow(7px 2px 0 var(--navy));
+  filter: drop-shadow(7px 2px 0 var(--navy)) drop-shadow(-7px -2px 0 #653c3c);
 }
 
 .sauce-item:nth-child(2) .sauce-item__photo img {
-  filter: drop-shadow(-2px 7px 0 var(--navy));
+  filter: drop-shadow(-2px 7px 0 var(--navy)) drop-shadow(2px -7px 0 #653c3c);
 }
 
 .sauce-item:nth-child(3) .sauce-item__photo img {
-  filter: drop-shadow(8px 6px 0 var(--navy));
+  filter: drop-shadow(8px 6px 0 var(--navy)) drop-shadow(-8px -6px 0 #653c3c);
 }
 
 .sauce-item:nth-child(4) .sauce-item__photo img {
-  filter: drop-shadow(-7px 3px 0 var(--navy));
+  filter: drop-shadow(-7px 3px 0 var(--navy)) drop-shadow(7px -3px 0 #653c3c);
 }
 
 .sauce-item:nth-child(5) .sauce-item__photo img {
-  filter: drop-shadow(3px -6px 0 var(--navy));
+  filter: drop-shadow(3px -6px 0 var(--navy)) drop-shadow(-3px 6px 0 #653c3c);
 }
 
 .sauce-item:nth-child(6) .sauce-item__photo img {
-  filter: drop-shadow(-6px -3px 0 var(--navy));
+  filter: drop-shadow(-6px -3px 0 var(--navy)) drop-shadow(6px 3px 0 #653c3c);
 }
 
 .sauce-item__name {
