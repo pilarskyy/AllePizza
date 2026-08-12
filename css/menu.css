@@ -645,10 +645,17 @@
    around the actual pixels via drop-shadow instead of a box-shadow on
    a container. Same idea as .pizza-card__photo--freeform. Width caps
    at 11rem but shrinks with its grid column so it never overflows a
-   narrower track. */
+   narrower track.
+
+   The shadow is cast by a ::before twin of the same photo, sized to
+   the wrapper and never transformed — the real <img> sits on top and
+   is free to scale up on hover without stretching the shadow, so the
+   sauce visibly grows past a shadow that stays completely still. */
 .sauce-item__photo {
+  position: relative;
   display: block;
   width: min(11rem, 100%);
+  overflow: visible;
 }
 
 @media (max-width: 600px) {
@@ -657,11 +664,27 @@
   }
 }
 
+.sauce-item__photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .sauce-item__photo img {
+  position: relative;
+  z-index: 1;
   display: block;
   width: 100%;
   height: auto;
-  filter: drop-shadow(5px 5px 0 var(--navy));
+  transition: transform 0.25s ease;
+}
+
+.sauce-item:hover .sauce-item__photo img {
+  transform: scale(1.15);
 }
 
 /* Each sauce gets a distinctly different shadow angle/reach — spread
@@ -669,38 +692,51 @@
    for real hand-drawn scatter instead of six near-identical shadows.
    A second, lighter shadow mirrors each one in the opposite direction
    for a bit of layered depth. */
-.sauce-item:nth-child(1) .sauce-item__photo img {
+.sauce-item:nth-child(1) .sauce-item__photo::before {
+  background-image: url("../img/sos-pomidorowy-desktop.webp");
   filter: drop-shadow(7px 2px 0 var(--navy)) drop-shadow(-7px -2px 0 #653c3c);
 }
 
-.sauce-item:nth-child(2) .sauce-item__photo img {
+.sauce-item:nth-child(2) .sauce-item__photo::before {
+  background-image: url("../img/sos-czosnkowy-desktop.webp");
   filter: drop-shadow(-2px 7px 0 var(--navy)) drop-shadow(2px -7px 0 #653c3c);
 }
 
-.sauce-item:nth-child(3) .sauce-item__photo img {
+.sauce-item:nth-child(3) .sauce-item__photo::before {
+  background-image: url("../img/sos-ketchup-desktop.webp");
   filter: drop-shadow(8px 6px 0 var(--navy)) drop-shadow(-8px -6px 0 #653c3c);
 }
 
-.sauce-item:nth-child(4) .sauce-item__photo img {
+.sauce-item:nth-child(4) .sauce-item__photo::before {
+  background-image: url("../img/sos-ostry-desktop.webp");
   filter: drop-shadow(-7px 3px 0 var(--navy)) drop-shadow(7px -3px 0 #653c3c);
 }
 
-.sauce-item:nth-child(5) .sauce-item__photo img {
+.sauce-item:nth-child(5) .sauce-item__photo::before {
+  background-image: url("../img/sos-bardzo-ostry-desktop.webp");
   filter: drop-shadow(3px -6px 0 var(--navy)) drop-shadow(-3px 6px 0 #653c3c);
 }
 
-.sauce-item:nth-child(6) .sauce-item__photo img {
+.sauce-item:nth-child(6) .sauce-item__photo::before {
+  background-image: url("../img/sos-maselko-czosnkowe-desktop.webp");
   filter: drop-shadow(-6px -3px 0 var(--navy)) drop-shadow(6px 3px 0 #653c3c);
 }
 
 .sauce-item__name {
   font-weight: 700;
   color: var(--text);
+  transition: transform 0.25s ease;
 }
 
 .sauce-item__price {
   font-weight: 700;
   color: var(--navy);
+  transition: transform 0.25s ease;
+}
+
+.sauce-item:hover .sauce-item__name,
+.sauce-item:hover .sauce-item__price {
+  transform: scale(1.08);
 }
 
 @media (max-width: 640px) {
