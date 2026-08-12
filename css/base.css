@@ -321,3 +321,48 @@ p {
 .page-hero p {
   color: rgba(255, 255, 255, 0.7);
 }
+
+/* ===== 09. BACK TO TOP ===== */
+.back-to-top {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.5rem;
+  z-index: 80;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  border-radius: 50%;
+  background: var(--orange);
+  color: var(--white);
+  font-size: 1.1rem;
+  box-shadow: var(--shadow-card);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s, background-color 0.15s ease;
+}
+
+.back-to-top:hover {
+  background: var(--orange-dark);
+}
+
+.back-to-top:focus-visible {
+  outline: 3px solid var(--orange-dark);
+  outline-offset: 2px;
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+@media (max-width: 640px) {
+  .back-to-top {
+    bottom: 5.5rem;
+  }
+}
