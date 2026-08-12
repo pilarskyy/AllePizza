@@ -79,6 +79,135 @@
   flex-wrap: wrap;
 }
 
+/* ===== 04. CATERING PACKAGES ===== */
+.package-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.package-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  box-shadow: var(--shadow-card);
+}
+
+/* Same comic-bubble treatment as .pizza-card__badge — pinned over the
+   corner, spilling slightly outside the card. */
+.package-card__badge {
+  position: absolute;
+  top: -0.85rem;
+  left: -0.85rem;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  background: var(--orange);
+  color: var(--white);
+  padding: 0.4rem 0.8rem;
+  border: 3px solid var(--navy);
+  border-radius: 1.1rem 1.3rem 1.2rem 1.4rem;
+  box-shadow: 4px 4px 0 var(--navy);
+  font-weight: 800;
+  font-size: 0.85rem;
+  transform: rotate(-4deg);
+}
+
+.package-card__name {
+  margin-top: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.package-card__audience {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: var(--space-sm);
+}
+
+.package-card__audience i {
+  color: var(--orange);
+}
+
+.package-card__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.88rem;
+  color: var(--text);
+  margin-bottom: var(--space-sm);
+  flex-grow: 1;
+}
+
+.package-card__list li {
+  padding-left: 1rem;
+  position: relative;
+}
+
+.package-card__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: var(--orange);
+}
+
+.package-card__price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  padding-top: var(--space-sm);
+  border-top: 1px dashed var(--border);
+}
+
+.package-card__price-old {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+
+.package-card__price-new {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--navy);
+  font-family: var(--font-display);
+}
+
+.package-card__save {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--success);
+  margin-bottom: var(--space-sm);
+}
+
+.package-card .btn {
+  align-self: flex-start;
+}
+
+.package-note {
+  margin-top: var(--space-md);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.package-note i {
+  color: var(--orange-dark);
+  margin-top: 0.2rem;
+}
+
+.package-note a {
+  color: var(--orange-dark);
+  font-weight: 700;
+}
+
 @media (max-width: 860px) {
   .catering-intro {
     grid-template-columns: 1fr;
@@ -89,6 +218,10 @@
   }
 
   .benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .package-grid {
     grid-template-columns: 1fr;
   }
 }

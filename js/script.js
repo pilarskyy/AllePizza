@@ -118,8 +118,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  const pizzaSearchClear = document.querySelector("[data-pizza-search-clear]");
+
+  const toggleSearchClear = () => {
+    if (pizzaSearchClear) pizzaSearchClear.hidden = !pizzaSearchInput.value;
+  };
+
   if (pizzaSearchInput) {
-    pizzaSearchInput.addEventListener("input", applyPizzaVisibility);
+    pizzaSearchInput.addEventListener("input", () => {
+      applyPizzaVisibility();
+      toggleSearchClear();
+    });
+  }
+
+  if (pizzaSearchClear) {
+    pizzaSearchClear.addEventListener("click", () => {
+      pizzaSearchInput.value = "";
+      applyPizzaVisibility();
+      toggleSearchClear();
+      pizzaSearchInput.focus();
+    });
   }
 
   const filterReset = document.querySelector("[data-filter-reset]");
@@ -129,6 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
       filterChips.forEach((c) => c.classList.toggle("is-active", c.dataset.filter === "wszystkie"));
       if (pizzaSearchInput) pizzaSearchInput.value = "";
       applyPizzaVisibility();
+      toggleSearchClear();
     });
   }
 

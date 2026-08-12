@@ -113,6 +113,25 @@
   color: var(--text-muted);
 }
 
+.pizza-search__clear {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: none;
+  border-radius: 50%;
+  background: none;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.pizza-search__clear:hover {
+  background: var(--cream);
+  color: var(--orange-dark);
+}
+
 .pizza-search__hint {
   margin-top: 0.45rem;
   max-width: 34rem;
@@ -174,6 +193,10 @@
 
 .filter-chip--polecane.is-active i {
   color: var(--orange);
+}
+
+.filter-empty[hidden] {
+  display: none;
 }
 
 .filter-empty {
