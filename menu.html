@@ -9,6 +9,11 @@
     content="Pełne menu Alle Pizza: 55 pizz w rozmiarach 32/45 cm, przekąski, napoje i dodatki. Sprawdź ceny i zamów online z dowozem po Gorzowie Wlkp."
   />
 
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="48x48" href="img/favicon-48.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96.png" />
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -35,7 +40,11 @@
       </a>
 
       <button class="nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">
-        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        <span class="nav__toggle-bars" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
         <span class="visually-hidden">Otwórz menu</span>
       </button>
 
@@ -55,14 +64,34 @@
   <div class="nav-scrim" data-nav-scrim></div>
 
   <div class="mobile-callbar">
-    <a href="tel:+48957352211" class="mobile-callbar__call">
-      <i class="fa-solid fa-phone" aria-hidden="true"></i>
-      Zadzwoń: 95 735 22 11
-    </a>
     <span class="mobile-callbar__hours">
       <i class="fa-solid fa-clock" aria-hidden="true"></i>
       Czynne 11:00–23:00
     </span>
+    <button
+      type="button"
+      class="mobile-callbar__call"
+      data-call-toggle
+      aria-haspopup="dialog"
+      aria-expanded="false"
+    >
+      <i class="fa-solid fa-phone" aria-hidden="true"></i>
+      Zadzwoń
+    </button>
+  </div>
+
+  <div class="call-modal" data-call-modal>
+    <div class="call-modal__scrim" data-call-modal-scrim></div>
+    <div class="call-modal__panel" role="dialog" aria-modal="true" aria-label="Wybierz numer telefonu">
+      <h2 class="call-modal__title">Wybierz numer</h2>
+      <a href="tel:+48957352211" class="call-modal__option">
+        <i class="fa-solid fa-phone" aria-hidden="true"></i> 95 735 22 11
+      </a>
+      <a href="tel:+48666811237" class="call-modal__option">
+        <i class="fa-solid fa-phone" aria-hidden="true"></i> 666 811 237
+      </a>
+      <button type="button" class="call-modal__cancel" data-call-modal-close>Anuluj</button>
+    </div>
   </div>
 
   <main id="main">

@@ -148,4 +148,29 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeAllergenTooltips();
   });
+
+  // ===== 07. CALL MODAL (choose phone number) =====
+  const callToggle = document.querySelector("[data-call-toggle]");
+  const callModal = document.querySelector("[data-call-modal]");
+  const callModalScrim = document.querySelector("[data-call-modal-scrim]");
+  const callModalClose = document.querySelector("[data-call-modal-close]");
+
+  const closeCallModal = () => {
+    callModal.classList.remove("is-open");
+    callToggle.setAttribute("aria-expanded", "false");
+  };
+
+  if (callToggle && callModal) {
+    callToggle.addEventListener("click", () => {
+      callModal.classList.add("is-open");
+      callToggle.setAttribute("aria-expanded", "true");
+    });
+
+    callModalScrim.addEventListener("click", closeCallModal);
+    callModalClose.addEventListener("click", closeCallModal);
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeCallModal();
+    });
+  }
 });
