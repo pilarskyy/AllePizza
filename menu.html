@@ -1224,6 +1224,9 @@
           <button class="menu-tabs__btn" type="button" role="tab" aria-selected="false" data-tab-target="pizza">
             <i class="fa-solid fa-pizza-slice" aria-hidden="true"></i> Pizza
           </button>
+          <button class="menu-tabs__btn" type="button" role="tab" aria-selected="false" data-tab-target="sosy">
+            <i class="fa-solid fa-pepper-hot" aria-hidden="true"></i> Sosy
+          </button>
           <button class="menu-tabs__btn" type="button" role="tab" aria-selected="false" data-tab-target="przekaski">
             <i class="fa-solid fa-drumstick-bite" aria-hidden="true"></i> Przekąski
           </button>
@@ -3519,6 +3522,60 @@
           </details>
         </div>
 
+        <div class="menu-panel is-active is-all-view" data-tab-panel="sosy" id="sosy">
+          <h2 class="menu-panel__heading"><i class="fa-solid fa-pepper-hot" aria-hidden="true"></i> Sosy</h2>
+          <div class="sauce-grid">
+            <div class="sauce-item">
+              <picture class="sauce-item__photo">
+                <source media="(max-width: 640px)" srcset="img/sos-pomidorowy-mobile.webp">
+                <img src="img/sos-pomidorowy-desktop.webp" width="320" height="228" alt="Sos pomidorowy" loading="lazy" decoding="async">
+              </picture>
+              <span class="sauce-item__name">Sos pomidorowy</span>
+              <span class="sauce-item__price">5,00 zł</span>
+            </div>
+            <div class="sauce-item">
+              <picture class="sauce-item__photo">
+                <source media="(max-width: 640px)" srcset="img/sos-czosnkowy-mobile.webp">
+                <img src="img/sos-czosnkowy-desktop.webp" width="320" height="228" alt="Sos czosnkowy" loading="lazy" decoding="async">
+              </picture>
+              <span class="sauce-item__name">Sos czosnkowy</span>
+              <span class="sauce-item__price">5,00 zł</span>
+            </div>
+            <div class="sauce-item">
+              <picture class="sauce-item__photo">
+                <source media="(max-width: 640px)" srcset="img/sos-ketchup-mobile.webp">
+                <img src="img/sos-ketchup-desktop.webp" width="320" height="228" alt="Ketchup" loading="lazy" decoding="async">
+              </picture>
+              <span class="sauce-item__name">Ketchup</span>
+              <span class="sauce-item__price">5,00 zł</span>
+            </div>
+            <div class="sauce-item">
+              <picture class="sauce-item__photo">
+                <source media="(max-width: 640px)" srcset="img/sos-ostry-mobile.webp">
+                <img src="img/sos-ostry-desktop.webp" width="320" height="228" alt="Sos ostry" loading="lazy" decoding="async">
+              </picture>
+              <span class="sauce-item__name">Sos ostry</span>
+              <span class="sauce-item__price">5,00 zł</span>
+            </div>
+            <div class="sauce-item">
+              <picture class="sauce-item__photo">
+                <source media="(max-width: 640px)" srcset="img/sos-bardzo-ostry-mobile.webp">
+                <img src="img/sos-bardzo-ostry-desktop.webp" width="320" height="228" alt="Sos bardzo ostry" loading="lazy" decoding="async">
+              </picture>
+              <span class="sauce-item__name">Sos bardzo ostry</span>
+              <span class="sauce-item__price">5,00 zł</span>
+            </div>
+            <div class="sauce-item">
+              <picture class="sauce-item__photo">
+                <source media="(max-width: 640px)" srcset="img/sos-maselko-czosnkowe-mobile.webp">
+                <img src="img/sos-maselko-czosnkowe-desktop.webp" width="320" height="228" alt="Masełko czosnkowe" loading="lazy" decoding="async">
+              </picture>
+              <span class="sauce-item__name">Masełko czosnkowe</span>
+              <span class="sauce-item__price">5,00 zł</span>
+            </div>
+          </div>
+        </div>
+
         <div class="menu-panel is-active is-all-view" data-tab-panel="przekaski" id="przekaski">
           <h2 class="menu-panel__heading"><i class="fa-solid fa-drumstick-bite" aria-hidden="true"></i> Przekąski</h2>
           <div class="snack-grid">
@@ -3669,11 +3726,6 @@
                 <td>Warzywa</td>
                 <td>4,00 zł</td>
                 <td>5,00 zł</td>
-              </tr>
-              <tr>
-                <td>Sosy: pomidorowy, czosnkowy, ketchup</td>
-                <td>3,50 zł</td>
-                <td>4,00 zł</td>
               </tr>
             </tbody>
           </table>

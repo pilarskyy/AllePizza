@@ -539,6 +539,96 @@
   font-size: 0.9rem;
 }
 
+/* ===== 10. SAUCE GRID (sosy) =====
+   Starts as a single row of 6 on wide screens; explicit steps (instead
+   of fluid auto-fit) so it only ever splits into even, symmetric rows
+   — 6 → 3 → 2 → 1 — rather than an odd leftover row like 4+2 or 5+1. */
+.sauce-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--space-lg) var(--space-md);
+}
+
+@media (max-width: 1024px) {
+  .sauce-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .sauce-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 400px) {
+  .sauce-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.sauce-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+}
+
+/* No frame, no crop — just the supplied cutout photo at its natural
+   shape, with a hard comic-style shadow (matching .hero__chip) traced
+   around the actual pixels via drop-shadow instead of a box-shadow on
+   a container. Same idea as .pizza-card__photo--freeform. Width caps
+   at 11rem but shrinks with its grid column so it never overflows a
+   narrower track. */
+.sauce-item__photo {
+  display: block;
+  width: min(11rem, 100%);
+}
+
+.sauce-item__photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(5px 5px 0 var(--navy));
+}
+
+/* Each sauce gets a slightly different shadow angle/reach — a bit of
+   hand-drawn variety instead of six identical, mechanical shadows. */
+.sauce-item:nth-child(1) .sauce-item__photo img {
+  filter: drop-shadow(5px 5px 0 var(--navy));
+}
+
+.sauce-item:nth-child(2) .sauce-item__photo img {
+  filter: drop-shadow(-5px 4px 0 var(--navy));
+}
+
+.sauce-item:nth-child(3) .sauce-item__photo img {
+  filter: drop-shadow(6px 3px 0 var(--navy));
+}
+
+.sauce-item:nth-child(4) .sauce-item__photo img {
+  filter: drop-shadow(-3px 6px 0 var(--navy));
+}
+
+.sauce-item:nth-child(5) .sauce-item__photo img {
+  filter: drop-shadow(4px 6px 0 var(--navy));
+}
+
+.sauce-item:nth-child(6) .sauce-item__photo img {
+  filter: drop-shadow(-6px 4px 0 var(--navy));
+}
+
+.sauce-item__name {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.sauce-item__price {
+  font-weight: 700;
+  color: var(--navy);
+}
+
 @media (max-width: 640px) {
   .allergen-legend__list {
     grid-template-columns: 1fr;
