@@ -593,30 +593,31 @@
   filter: drop-shadow(5px 5px 0 var(--navy));
 }
 
-/* Each sauce gets a slightly different shadow angle/reach — a bit of
-   hand-drawn variety instead of six identical, mechanical shadows. */
+/* Each sauce gets a distinctly different shadow angle/reach — spread
+   across magnitudes and directions (including a couple thrown "up")
+   for real hand-drawn scatter instead of six near-identical shadows. */
 .sauce-item:nth-child(1) .sauce-item__photo img {
-  filter: drop-shadow(5px 5px 0 var(--navy));
+  filter: drop-shadow(7px 2px 0 var(--navy));
 }
 
 .sauce-item:nth-child(2) .sauce-item__photo img {
-  filter: drop-shadow(-5px 4px 0 var(--navy));
+  filter: drop-shadow(-2px 7px 0 var(--navy));
 }
 
 .sauce-item:nth-child(3) .sauce-item__photo img {
-  filter: drop-shadow(6px 3px 0 var(--navy));
+  filter: drop-shadow(8px 6px 0 var(--navy));
 }
 
 .sauce-item:nth-child(4) .sauce-item__photo img {
-  filter: drop-shadow(-3px 6px 0 var(--navy));
+  filter: drop-shadow(-7px 3px 0 var(--navy));
 }
 
 .sauce-item:nth-child(5) .sauce-item__photo img {
-  filter: drop-shadow(4px 6px 0 var(--navy));
+  filter: drop-shadow(3px -6px 0 var(--navy));
 }
 
 .sauce-item:nth-child(6) .sauce-item__photo img {
-  filter: drop-shadow(-6px 4px 0 var(--navy));
+  filter: drop-shadow(-6px -3px 0 var(--navy));
 }
 
 .sauce-item__name {
