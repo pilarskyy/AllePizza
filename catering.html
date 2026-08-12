@@ -262,7 +262,16 @@
           </p>
         </div>
 
-        <div class="package-grid">
+        <div class="package-carousel">
+          <button
+            type="button"
+            class="package-carousel__arrow package-carousel__arrow--prev"
+            data-package-prev
+            aria-label="Poprzedni pakiet"
+          >
+            <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+          </button>
+          <div class="package-grid" data-package-grid>
           <article class="package-card">
             <span class="package-card__badge">-10%</span>
             <h3 class="package-card__name">Zespołowy Lunch</h3>
@@ -325,13 +334,31 @@
             <p class="package-card__save">Oszczędzasz 177,50 zł</p>
             <a class="btn btn--primary btn--sm" href="tel:+48957352211">Zapytaj o ten pakiet</a>
           </article>
+          </div>
+          <button
+            type="button"
+            class="package-carousel__arrow package-carousel__arrow--next"
+            data-package-next
+            aria-label="Następny pakiet"
+          >
+            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+          </button>
         </div>
 
         <p class="package-note">
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
           Ceny orientacyjne, wyliczone z aktualnego cennika menu — skład
-          pakietu i szczegóły dostawy ustalamy telefonicznie pod
-          <a href="tel:+48957352211">95 735 22 11</a>.
+          pakietu i szczegóły dostawy ustalamy telefonicznie
+          <button
+            type="button"
+            class="package-note__call"
+            data-call-toggle
+            aria-haspopup="dialog"
+            aria-expanded="false"
+            aria-label="Zadzwoń — wybierz numer"
+          >
+            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+          </button>.
         </p>
       </div>
     </section>

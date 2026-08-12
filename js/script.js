@@ -179,7 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ===== 07. CALL MODAL (choose phone number) =====
-  const callToggle = document.querySelector("[data-call-toggle]");
+  const callToggles = document.querySelectorAll("[data-call-toggle]");
   const callModal = document.querySelector("[data-call-modal]");
   const callModalPanel = document.querySelector(".call-modal__panel");
   const callModalScrim = document.querySelector("[data-call-modal-scrim]");
@@ -192,19 +192,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const openCallModal = () => {
     callModalLastFocused = document.activeElement;
     callModal.classList.add("is-open");
-    callToggle.setAttribute("aria-expanded", "true");
+    callToggles.forEach((toggle) => toggle.setAttribute("aria-expanded", "true"));
     const focusable = getCallModalFocusable();
     if (focusable.length) focusable[0].focus();
   };
 
   const closeCallModal = () => {
     callModal.classList.remove("is-open");
-    callToggle.setAttribute("aria-expanded", "false");
+    callToggles.forEach((toggle) => toggle.setAttribute("aria-expanded", "false"));
     if (callModalLastFocused) callModalLastFocused.focus();
   };
 
-  if (callToggle && callModal) {
-    callToggle.addEventListener("click", openCallModal);
+  if (callToggles.length && callModal) {
+    callToggles.forEach((toggle) => toggle.addEventListener("click", openCallModal));
 
     callModalScrim.addEventListener("click", closeCallModal);
     callModalClose.addEventListener("click", closeCallModal);
@@ -249,5 +249,98 @@ document.addEventListener("DOMContentLoaded", () => {
       ).matches;
       window.scrollTo({ top: 0, behavior: prefersReducedMotion ? "auto" : "smooth" });
     });
+  }
+
+  // ===== 09. CATERING PACKAGE CAROUSEL (mobile, looping) =====
+  const packageGrid = document.querySelector("[data-package-grid]");
+  const packagePrev = document.querySelector("[data-package-prev]");
+  const packageNext = document.querySelector("[data-package-next]");
+
+  if (packageGrid && packagePrev && packageNext) {
+    const carouselQuery = window.matchMedia("(max-width: 640px)");
+    const originalCards = Array.from(packageGrid.children);
+    let clonesAdded = false;
+
+    const addClones = () => {
+      if (clonesAdded || originalCards.length < 2) return;
+      const firstClone = originalCards[0].cloneNode(true);
+      const lastClone = originalCards[originalCards.length - 1].cloneNode(true);
+      [firstClone, lastClone].forEach((clone) => {
+        clone.setAttribute("aria-hidden", "true");
+        clone.querySelectorAll("a, button").forEach((el) => el.setAttribute("tabindex", "-1"));
+      });
+      packageGrid.insertBefore(lastClone, originalCards[0]);
+      packageGrid.appendChild(firstClone);
+      clonesAdded = true;
+    };
+
+    const removeClones = () => {
+      if (!clonesAdded) return;
+      packageGrid.querySelectorAll('[aria-hidden="true"]').forEach((el) => el.remove());
+      clonesAdded = false;
+    };
+
+    const scrollToIndex = (index, smooth = true) => {
+      const card = packageGrid.children[index];
+      if (!card) return;
+      packageGrid.scrollTo({
+        left: card.offsetLeft - (packageGrid.clientWidth - card.clientWidth) / 2,
+        behavior: smooth ? "smooth" : "auto",
+      });
+    };
+
+    const currentIndex = () => {
+      const children = Array.from(packageGrid.children);
+      const center = packageGrid.scrollLeft + packageGrid.clientWidth / 2;
+      let closest = 0;
+      let closestDist = Infinity;
+      children.forEach((child, i) => {
+        const childCenter = child.offsetLeft + child.clientWidth / 2;
+        const dist = Math.abs(childCenter - center);
+        if (dist < closestDist) {
+          closestDist = dist;
+          closest = i;
+        }
+      });
+      return closest;
+    };
+
+    // When a swipe/scroll settles on a clone (index 0 or the last child),
+    // jump instantly to the matching real card so it feels like an
+    // endless loop instead of hitting a wall.
+    const handleLoopEdge = () => {
+      const idx = currentIndex();
+      const lastRealIndex = packageGrid.children.length - 2;
+      if (idx === 0) {
+        scrollToIndex(lastRealIndex, false);
+      } else if (idx === packageGrid.children.length - 1) {
+        scrollToIndex(1, false);
+      }
+    };
+
+    let scrollEndTimer;
+    packageGrid.addEventListener(
+      "scroll",
+      () => {
+        clearTimeout(scrollEndTimer);
+        scrollEndTimer = setTimeout(handleLoopEdge, 150);
+      },
+      { passive: true }
+    );
+
+    packagePrev.addEventListener("click", () => scrollToIndex(currentIndex() - 1));
+    packageNext.addEventListener("click", () => scrollToIndex(currentIndex() + 1));
+
+    const syncCarouselMode = () => {
+      if (carouselQuery.matches) {
+        addClones();
+        scrollToIndex(1, false);
+      } else {
+        removeClones();
+      }
+    };
+
+    syncCarouselMode();
+    carouselQuery.addEventListener("change", syncCarouselMode);
   }
 });

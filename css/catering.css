@@ -214,6 +214,41 @@
   font-weight: 700;
 }
 
+.package-note__call {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  border: none;
+  border-radius: 50%;
+  background: var(--cream);
+  color: var(--orange-dark);
+  cursor: pointer;
+  vertical-align: middle;
+  margin-inline: 0.2rem;
+}
+
+.package-note__call:hover {
+  background: var(--orange);
+  color: var(--white);
+}
+
+.package-note__call i {
+  margin-top: 0;
+  color: inherit;
+}
+
+.package-carousel {
+  position: relative;
+}
+
+/* Hidden on desktop/tablet — the grid stays a static 3-up layout there.
+   Only ≤640px switches this into a looping, swipeable peek carousel. */
+.package-carousel__arrow {
+  display: none;
+}
+
 @media (max-width: 860px) {
   .catering-intro {
     grid-template-columns: 1fr;
@@ -229,5 +264,56 @@
 
   .package-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .package-grid {
+    display: flex;
+    gap: var(--space-md);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    /* overflow-x: auto forces overflow-y to compute as auto too, which
+       would otherwise clip the badge's negative top offset — extra
+       top padding keeps it fully visible instead of cut off. */
+    padding-block: 1.25rem 0.5rem;
+  }
+
+  .package-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .package-grid .package-card {
+    flex: 0 0 80%;
+    scroll-snap-align: center;
+  }
+
+  .package-carousel__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    width: 2.25rem;
+    height: 2.25rem;
+    border: none;
+    border-radius: 50%;
+    background: var(--white);
+    color: var(--navy);
+    box-shadow: var(--shadow-card);
+    cursor: pointer;
+    transform: translateY(-50%);
+  }
+
+  .package-carousel__arrow--prev {
+    left: 0.25rem;
+  }
+
+  .package-carousel__arrow--next {
+    right: 0.25rem;
   }
 }
