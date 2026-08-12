@@ -173,4 +173,21 @@ document.addEventListener("DOMContentLoaded", () => {
       if (e.key === "Escape") closeCallModal();
     });
   }
+
+  // ===== 08. BACK TO TOP =====
+  const backToTopBtn = document.querySelector("[data-back-to-top]");
+  if (backToTopBtn) {
+    const toggleBackToTop = () => {
+      backToTopBtn.classList.toggle("is-visible", window.scrollY > 600);
+    };
+    toggleBackToTop();
+    window.addEventListener("scroll", toggleBackToTop, { passive: true });
+
+    backToTopBtn.addEventListener("click", () => {
+      const prefersReducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+      window.scrollTo({ top: 0, behavior: prefersReducedMotion ? "auto" : "smooth" });
+    });
+  }
 });
