@@ -7,7 +7,7 @@
 ## Strony
 
 - [Start](https://allepizza.pl/): Strona główna — oferta, promocje, dane kontaktowe.
-- [Menu](https://allepizza.pl/menu.html): Pełne menu — 55 pizz (32/45 cm), przekąski, napoje, dodatki, ceny i alergeny.
+- [Menu](https://allepizza.pl/menu.html): Pełne menu — 55 pizz (32/45 cm, część oznaczona jako Polecane), 6 sosów (5 zł/porcja), przekąski, napoje, dodatki, ceny i alergeny.
 - [Catering](https://allepizza.pl/catering.html): Oferta cateringu firmowego i szkolnego, rabaty przy zamówieniach grupowych.
 - [Kontakt](https://allepizza.pl/kontakt.html): Telefon, e-mail, godziny otwarcia, linki do zamawiania, FAQ.
 

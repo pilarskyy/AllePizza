@@ -122,6 +122,16 @@ document.addEventListener("DOMContentLoaded", () => {
     pizzaSearchInput.addEventListener("input", applyPizzaVisibility);
   }
 
+  const filterReset = document.querySelector("[data-filter-reset]");
+  if (filterReset) {
+    filterReset.addEventListener("click", () => {
+      activeTagFilter = "wszystkie";
+      filterChips.forEach((c) => c.classList.toggle("is-active", c.dataset.filter === "wszystkie"));
+      if (pizzaSearchInput) pizzaSearchInput.value = "";
+      applyPizzaVisibility();
+    });
+  }
+
   // ===== 06. ALLERGEN TOOLTIPS (tap-to-toggle on touch, hover/focus on desktop via CSS) =====
   const allergenWraps = document.querySelectorAll(".pizza-card__allergens-wrap");
 
@@ -152,25 +162,56 @@ document.addEventListener("DOMContentLoaded", () => {
   // ===== 07. CALL MODAL (choose phone number) =====
   const callToggle = document.querySelector("[data-call-toggle]");
   const callModal = document.querySelector("[data-call-modal]");
+  const callModalPanel = document.querySelector(".call-modal__panel");
   const callModalScrim = document.querySelector("[data-call-modal-scrim]");
   const callModalClose = document.querySelector("[data-call-modal-close]");
+  let callModalLastFocused = null;
+
+  const getCallModalFocusable = () =>
+    Array.from(callModalPanel.querySelectorAll("a[href], button:not([disabled])"));
+
+  const openCallModal = () => {
+    callModalLastFocused = document.activeElement;
+    callModal.classList.add("is-open");
+    callToggle.setAttribute("aria-expanded", "true");
+    const focusable = getCallModalFocusable();
+    if (focusable.length) focusable[0].focus();
+  };
 
   const closeCallModal = () => {
     callModal.classList.remove("is-open");
     callToggle.setAttribute("aria-expanded", "false");
+    if (callModalLastFocused) callModalLastFocused.focus();
   };
 
   if (callToggle && callModal) {
-    callToggle.addEventListener("click", () => {
-      callModal.classList.add("is-open");
-      callToggle.setAttribute("aria-expanded", "true");
-    });
+    callToggle.addEventListener("click", openCallModal);
 
     callModalScrim.addEventListener("click", closeCallModal);
     callModalClose.addEventListener("click", closeCallModal);
 
     document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") closeCallModal();
+      if (!callModal.classList.contains("is-open")) return;
+
+      if (e.key === "Escape") {
+        closeCallModal();
+        return;
+      }
+
+      // Trap Tab focus inside the dialog while it's open.
+      if (e.key === "Tab") {
+        const focusable = getCallModalFocusable();
+        if (!focusable.length) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
     });
   }
 

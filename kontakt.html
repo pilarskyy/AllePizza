@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#3d0f0f" />
   <title>Kontakt — Alle Pizza Gorzów Wlkp.</title>
   <meta
     name="description"
@@ -31,6 +32,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&display=swap"
     rel="stylesheet"
@@ -149,6 +151,14 @@
         "@type": "Answer",
         "text": "Menu obejmuje 55 pozycji pizzy w rozmiarach 32 i 45 cm, a także przekąski, napoje i dodatki."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Czy mogę dokupić dodatkowy sos do pizzy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tak — w menu w kategorii Sosy znajdziesz 6 sosów (m.in. pomidorowy, czosnkowy, ostry, bardzo ostry i masełko czosnkowe) w cenie 5,00 zł za porcję."
+      }
     }
   ]
 }
@@ -177,7 +187,7 @@
           <li><a class="nav__link" href="index.html">Start</a></li>
           <li><a class="nav__link" href="menu.html">Menu</a></li>
           <li><a class="nav__link" href="catering.html">Catering</a></li>
-          <li><a class="nav__link nav__link--active" href="kontakt.html">Kontakt</a></li>
+          <li><a class="nav__link nav__link--active" href="kontakt.html" aria-current="page">Kontakt</a></li>
         </ul>
         <a class="btn btn--primary nav__cta" href="https://allepizza.papu.io/" target="_blank" rel="noopener">
           <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i> Zamów online
@@ -364,6 +374,14 @@
             <p>
               Menu obejmuje 55 pozycji pizzy w rozmiarach 32 i 45 cm, a także
               przekąski, napoje i dodatki.
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>Czy mogę dokupić dodatkowy sos do pizzy?</summary>
+            <p>
+              Tak — w menu w kategorii Sosy znajdziesz 6 sosów (m.in.
+              pomidorowy, czosnkowy, ostry, bardzo ostry i masełko czosnkowe)
+              w cenie 5,00 zł za porcję.
             </p>
           </details>
         </div>
