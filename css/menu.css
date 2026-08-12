@@ -176,6 +176,32 @@
   color: var(--orange);
 }
 
+.filter-empty {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  padding: var(--space-md);
+  background: var(--cream);
+  border-radius: var(--radius-md);
+}
+
+.filter-empty__reset {
+  border: 1px solid var(--orange);
+  background: var(--white);
+  color: var(--orange-dark);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+}
+
+.filter-empty__reset:hover {
+  background: var(--orange);
+  color: var(--white);
+}
+
 /* ===== 06. PIZZA GRID/CARD ===== */
 .pizza-grid {
   display: grid;
