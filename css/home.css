@@ -356,10 +356,15 @@
 
 @media (max-width: 640px) {
   .hero {
+    display: flex;
+    align-items: center;
+    min-height: calc(100vh - 14.5rem);
+    min-height: calc(100dvh - 14.5rem);
     padding-block: 0.25rem var(--space-lg);
   }
 
   .hero__grid {
+    width: 100%;
     gap: 0.35rem;
   }
 
